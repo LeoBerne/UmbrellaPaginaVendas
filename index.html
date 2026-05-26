@@ -25,6 +25,9 @@
   <title>Umbrella — Inteligência Artificial & Automações que Humanizam Negócios</title>
   
   <!-- Estilos e Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
@@ -38,10 +41,20 @@
     <div class="wrap">
       <nav aria-label="Navegação Principal">
         <a href="#" class="logo" id="nav-logo" aria-label="Voltar para a página inicial da Umbrella">
-          Umbrella<span>.</span>
+          <i class="ti ti-umbrella logo-icon" aria-hidden="true"></i>
+          <div class="logo-text">
+            <span class="logo-main">UMBRELA EXPERTI</span>
+            <span class="logo-sub">TECH INNOVATION HUB</span>
+          </div>
         </a>
+        <ul class="nav-links" role="list">
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#investimento">Products</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contact</a></li>
+        </ul>
         <button class="nav-cta" id="btn-nav-falar" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-          Falar com a gente
+          Falar com especialista
         </button>
       </nav>
     </div>
@@ -56,25 +69,21 @@
         <div class="hero-layout">
           <div class="hero-content reveal active">
             <span class="hero-badge" id="hero-loc-badge">
-              <i class="ti ti-map-pin" aria-hidden="true"></i> Teresina · PI
+              <i class="ti ti-map-pin" aria-hidden="true"></i> UMBRELA - 01
             </span>
-            <h1>Tecnologia que <span class="hl">conecta</span>, simplifica e faz crescer</h1>
-            <p>Aproximamos a Inteligência Artificial e automações inteligentes da realidade do seu negócio. Soluções personalizadas de CRM e automação para eliminar tarefas manuais e focar nas conexões que importam.</p>
+            <h1>TECNOLOGIA QUE ELEVA, SIMPLIFICA E TRANSFORMA SEU NEGÓCIO</h1>
+            <p>Soluções inteligentes e automações que liberam sua equipe para o que realmente importa: conexões humanas.</p>
             <div class="hero-btns">
               <button class="btn-primary" id="hero-cta-principal" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-                Conhecer soluções
+                CONTATE-NOS AGORA
               </button>
               <button class="btn-secondary" id="hero-cta-secundario" onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'})">
-                Ver serviços
+                VER SERVIÇOS
               </button>
             </div>
           </div>
           <div class="hero-visual reveal active">
-            <!-- Brand Shield Placeholder: Pronto para receber a marca visual posteriormente -->
-            <div class="brand-shield" id="marca-umbrella-box" aria-label="Espaço da marca visual Umbrella">
-              <i class="ti ti-umbrella shield-icon" aria-hidden="true"></i>
-              <div class="shield-text">Umbrella.</div>
-            </div>
+            <img src="assets/umbrella_circuit.png" alt="Guarda-chuva tecnológico de circuitos integrados" class="hero-illustration">
           </div>
         </div>
       </div>
@@ -84,16 +93,42 @@
     <div class="wrap">
       <div class="stats-bar reveal">
         <div class="stat" id="stat-produtividade">
-          <span class="stat-num" aria-label="Três vezes mais">3x</span>
-          <span class="stat-label">mais produtividade operacional</span>
+          <div class="stat-top">
+            <div class="stat-icon-group">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+            <span class="stat-num" aria-label="Três vezes mais">3X</span>
+            <div class="stat-icon-group">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+          </div>
+          <span class="stat-label">MAXIMIZAÇÃO DE PRODUTIVIDADE OPERACIONAL</span>
         </div>
         <div class="stat" id="stat-ia">
-          <span class="stat-num">IA</span>
-          <span class="stat-label">Soluções feitas sob medida</span>
+          <div class="stat-top">
+            <div class="stat-icon-group">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+            <span class="stat-num">IA</span>
+            <div class="stat-icon-group">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+              <div class="bar bar-3"></div>
+            </div>
+          </div>
+          <span class="stat-label">SOLUÇÕES CUSTOMIZADAS SOB MEDIDA</span>
         </div>
         <div class="stat" id="stat-foco">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">foco em resultados humanos</span>
+          <div class="stat-top">
+            <span class="stat-num">100%</span>
+          </div>
+          <span class="stat-label">FOCO NO FATOR HUMANO</span>
         </div>
       </div>
     </div>
@@ -108,75 +143,75 @@
         </div>
         
         <div class="services-grid">
-          <!-- Card Destaque: IA -->
-          <div class="service-card col-large featured" id="srv-ia">
+          <!-- Card IA -->
+          <div class="service-card" id="srv-ia">
             <div>
-              <div class="s-icon" style="color: var(--accent-yellow);" aria-hidden="true">
+              <div class="s-icon" aria-hidden="true">
                 <i class="ti ti-brain"></i>
               </div>
-              <span class="s-tag">Destaque</span>
               <h3>Soluções de Inteligência Artificial</h3>
-              <p>Agentes virtuais autônomos, assistentes de atendimento humanizados e processamento inteligente de textos baseados nos modelos de linguagem mais eficientes do mercado.</p>
+              <p>Agentes de IA inteligentes, assistentes de atendimento humanizados e processamento inteligente de dados inovando nos modelos de inteligência de seu negócio.</p>
             </div>
           </div>
 
           <!-- Card Automação -->
-          <div class="service-card col-medium" id="srv-automacao">
+          <div class="service-card" id="srv-automacao">
             <div>
-              <div class="s-icon" style="color: var(--accent-terracotta);" aria-hidden="true">
+              <div class="s-icon" aria-hidden="true">
                 <i class="ti ti-settings-automation"></i>
               </div>
               <h3>Automação de Processos</h3>
-              <p>Integramos seus sistemas favoritos e eliminamos tarefas repetitivas via Make, Zapier ou integrações nativas direto na API.</p>
+              <p>Integramos seus sistemas favoritos e rotinas usando ferramentas como Make, Zapier ou integrações customizadas via API.</p>
             </div>
           </div>
 
           <!-- Card CRM -->
-          <div class="service-card col-medium" id="srv-crm">
+          <div class="service-card" id="srv-crm">
             <div>
-              <div class="s-icon" style="color: var(--accent-forest);" aria-hidden="true">
-                <i class="ti ti-chart-line"></i>
+              <div class="s-icon" aria-hidden="true">
+                <i class="ti ti-users"></i>
               </div>
               <h3>CRM & Gestão de Clientes</h3>
-              <p>Configuração e otimização de CRM para que sua equipe de vendas nunca perca um lead ou uma conversa importante por falta de acompanhamento.</p>
+              <p>Configuração e otimização de CRM com foco em otimizar funis de venda e evitar a perda de oportunidades por falta de acompanhamento.</p>
             </div>
           </div>
 
           <!-- Card Consultoria -->
-          <div class="service-card col-large" id="srv-consultoria">
+          <div class="service-card" id="srv-consultoria">
             <div>
-              <div class="s-icon" style="color: var(--text-primary);" aria-hidden="true">
-                <i class="ti ti-bulb"></i>
+              <div class="s-icon" aria-hidden="true">
+                <i class="ti ti-world"></i>
               </div>
               <h3>Consultoria Estratégica</h3>
-              <p>Identificamos os gargalos de produtividade do seu negócio, desenhamos o fluxo operacional ideal e indicamos as melhores ferramentas para sua escala atual.</p>
+              <p>Desenhamos os caminhos mais curtos da sua realidade atual para a excelência de processos operacionais e de vendas.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quem Somos / Storytelling [NOVA SEÇÃO] -->
+    <!-- Quem Somos / Storytelling -->
     <section id="sobre" class="reveal">
       <div class="wrap">
         <div class="story-layout">
           <div class="story-visual">
-            <div class="story-brand-box" id="brand-purpose-box">
-              <span class="story-badge-local" id="local-about"><i class="ti ti-map-pin" aria-hidden="true"></i> Teresina, PI</span>
-              <p class="story-quote">"A tecnologia só faz sentido quando nos dá mais tempo para sermos verdadeiramente humanos."</p>
-              <div class="story-footer">
-                <div>
-                  <div class="founder-signature">Umbrella Soluções</div>
-                  <div class="founder-title">Tecnologia com Propósito</div>
-                </div>
+            <div class="story-image-card">
+              <img src="assets/meeting_tech.png" alt="Reunião de tecnologia da equipe Umbrella" class="story-img">
+              <div class="story-image-overlay">
+                <span class="story-overlay-location">Teresina, PI</span>
+                <p class="story-overlay-quote">"A tecnologia só faz sentido quando nos dá mais tempo para sermos verdadeiramente humanos."</p>
+                <span class="story-overlay-author">Umbrella Solution<br><small>Tech Innovation Teresina, PI</small></span>
               </div>
             </div>
           </div>
           <div class="story-content">
             <span class="section-label">Propósito</span>
             <h2 class="section-title">Aproximando a inovação de quem faz acontecer</h2>
-            <p>Acreditamos que Inteligência Artificial e automação de serviços não servem para substituir pessoas, mas para libertá-las de tarefas mecânicas que drenam tempo e energia.</p>
-            <p>Sediada em Teresina - PI, a Umbrella atua como uma parceira estratégica de tecnologia. Traduzimos termos técnicos complexos em soluções práticas, desenhadas sob medida para melhorar a eficiência da sua empresa sem perder o toque humano no processo.</p>
+            <p>Acreditamos que a inteligência artificial e a automação de processos não servem para substituir pessoas, mas para liberá-las de tarefas mecânicas que drenam tempo e energia.</p>
+            <p>Redefinimos Teresina - PI, acelerando processos operacionais através de inteligência e conectando soluções estratégicas, humanizando a tecnologia na base e aproximando as pessoas das empresas.</p>
+            <div class="story-globe-bg">
+              <img src="assets/globe_circuit.png" alt="Globo digital de circuitos" class="globe-bg-img">
+            </div>
           </div>
         </div>
       </div>
@@ -303,12 +338,43 @@
   <footer>
     <div class="wrap">
       <div class="footer-layout">
-        <div class="footer-logo">Umbrella<span>.</span></div>
+        <div class="footer-left">
+          Comece agora: <a href="tel:865553559" class="footer-phone">(86) 66 555-3559</a>
+        </div>
+        <div class="footer-nav">
+          <a href="#inicio">Contato</a>
+          <a href="#servicos">Links</a>
+          <a href="#sobre">Blog</a>
+        </div>
+      </div>
+      <div class="footer-sub-layout">
+        <div class="footer-logo">UMBRELA EXPERTI<span>.</span></div>
         <div class="footer-txt" id="footer-copyright">© 2026 Umbrella Soluções Digitais · Teresina, PI</div>
         <div class="footer-txt" id="footer-cnpj">CNPJ: em abertura</div>
       </div>
     </div>
   </footer>
+
+  <!-- Chatbot Flutuante -->
+  <a href="https://wa.me/5586966663559?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!" class="chatbot-float" target="_blank" aria-label="Falar com especialista no WhatsApp">
+    <div class="chatbot-bubble">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="12" width="32" height="26" rx="8" fill="currentColor" opacity="0.15"/>
+        <rect x="8" y="12" width="32" height="26" rx="8" stroke="currentColor" stroke-width="3"/>
+        <!-- Antenna -->
+        <path d="M24 12V6M24 6C25.657 6 27 4.657 27 3C27 1.343 25.657 0 24 0C22.343 0 21 1.343 21 3C21 4.657 22.343 6 24 6Z" fill="currentColor"/>
+        <path d="M24 12V6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- Eyes -->
+        <circle cx="18" cy="22" r="3" fill="currentColor"/>
+        <circle cx="30" cy="22" r="3" fill="currentColor"/>
+        <!-- Smile -->
+        <path d="M20 29C22 31 26 31 28 29" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- Ears / Bolts -->
+        <rect x="4" y="21" width="4" height="8" rx="2" fill="currentColor"/>
+        <rect x="40" y="21" width="4" height="8" rx="2" fill="currentColor"/>
+      </svg>
+    </div>
+  </a>
 
   <!-- Script para Interatividade e Scroll Reveal -->
   <script>
