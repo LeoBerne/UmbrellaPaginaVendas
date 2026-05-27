@@ -1,4 +1,4 @@
-# Umbrella — Página de Vendas (Warm & Organic Modern)
+# Umbrella — Página de Vendas
 
 Este repositório contém o site institucional e página de vendas da **Umbrella Soluções Digitais**, sediada em Teresina - PI. O site foi projetado com um design moderno escuro acolhedor (Warm Dark), alta performance (Vanilla HTML/CSS) e com foco em acessibilidade e SEO.
 
