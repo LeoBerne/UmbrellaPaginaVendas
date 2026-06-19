@@ -11,7 +11,6 @@
   <meta name="author" content="Umbrella">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://umbrelladigital.com.br/">
   <meta property="og:title" content="Umbrella — Automação & IA sob medida em Teresina">
@@ -19,17 +18,15 @@
     content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha, menos retrabalho — mais tempo pro que gera resultado de verdade.">
   <meta property="og:image" content="https://umbrelladigital.com.br/assets/og-image.png">
 
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://umbrelladigital.com.br/">
   <meta property="twitter:title" content="Umbrella — Automação & IA sob medida em Teresina">
   <meta property="twitter:description"
-    content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha, menos retrabalho — mais tempo pro que gera resultado de verdade.">
+    content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina.">
   <meta property="twitter:image" content="https://umbrelladigital.com.br/assets/og-image.png">
 
   <title>Umbrella — Automação & IA sob medida em Teresina</title>
 
-  <!-- Estilos e Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -41,68 +38,186 @@
 
 <body>
 
-  <!-- Acessibilidade: Link de Acesso Rápido -->
-  <a href="#conteudo-principal" class="sr-only"
-    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; background: var(--bg-card); color: var(--text-primary); text-align: center; line-height: 40px; z-index: 9999;">Ir
-    para o conteúdo principal</a>
+  <a href="#conteudo-principal" class="sr-only">Ir para o conteúdo principal</a>
 
-  <!-- Header & Navegação -->
+  <!-- Header -->
   <header id="header">
     <div class="wrap">
       <nav aria-label="Navegação Principal">
         <a href="#" class="logo" id="nav-logo" aria-label="Voltar para a página inicial da Umbrella">
-          <i class="ti ti-umbrella logo-icon" aria-hidden="true"></i>
+          <!-- Logo SVG baseada na identidade visual enviada -->
+          <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Umbrella canopy -->
+            <path d="M22 4 C10 4 4 13 4 22 L22 22 L40 22 C40 13 34 4 22 4Z" fill="none" stroke="#dfa95a"
+              stroke-width="2" stroke-linejoin="round" />
+            <!-- Umbrella ribs -->
+            <line x1="22" y1="4" x2="22" y2="22" stroke="#dfa95a" stroke-width="1.5" opacity="0.6" />
+            <line x1="13" y1="7" x2="17" y2="22" stroke="#dfa95a" stroke-width="1.2" opacity="0.4" />
+            <line x1="31" y1="7" x2="27" y2="22" stroke="#dfa95a" stroke-width="1.2" opacity="0.4" />
+            <!-- Robot body -->
+            <rect x="16" y="22" width="12" height="10" rx="3" fill="none" stroke="#dfa95a" stroke-width="1.8" />
+            <!-- Robot eyes -->
+            <circle cx="19.5" cy="26" r="1.2" fill="#dfa95a" />
+            <circle cx="24.5" cy="26" r="1.2" fill="#dfa95a" />
+            <!-- Robot smile -->
+            <path d="M19.5 29.5 Q22 31 24.5 29.5" stroke="#dfa95a" stroke-width="1.2" stroke-linecap="round"
+              fill="none" />
+            <!-- Robot antenna -->
+            <line x1="22" y1="22" x2="22" y2="19" stroke="#dfa95a" stroke-width="1.5" />
+            <circle cx="22" cy="18.5" r="1" fill="#dfa95a" />
+            <!-- Robot legs -->
+            <line x1="19" y1="32" x2="18" y2="38" stroke="#dfa95a" stroke-width="1.8" stroke-linecap="round" />
+            <line x1="25" y1="32" x2="26" y2="38" stroke="#dfa95a" stroke-width="1.8" stroke-linecap="round" />
+            <!-- Circuit dots -->
+            <circle cx="8" cy="15" r="1" fill="#dfa95a" opacity="0.5" />
+            <circle cx="36" cy="15" r="1" fill="#dfa95a" opacity="0.5" />
+            <circle cx="5" cy="20" r="0.8" fill="#dfa95a" opacity="0.3" />
+          </svg>
           <div class="logo-text">
             <span class="logo-main">UMBRELLA</span>
-            <span class="logo-sub">Automação & IA</span>
+            <span class="logo-sub">Automação · Sistemas · Dev</span>
           </div>
         </a>
+
+        <!-- Nav Links desktop -->
         <ul class="nav-links" role="list">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
           <li><a href="#investimento">Investimento</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
+
         <button class="nav-cta" id="btn-nav-falar"
-          onclick="window.open('https://wa.me/5586966663559?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!', '_blank')"
+          onclick="window.open('https://wa.me/5586981129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!', '_blank')"
           aria-label="Chamar equipe da Umbrella no WhatsApp">
-          Chamar no WhatsApp
+          <i class="ti ti-brand-whatsapp"></i> WhatsApp
+        </button>
+
+        <!-- Hambúrguer -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#inicio" class="mob-link">Início</a></li>
+        <li><a href="#servicos" class="mob-link">Serviços</a></li>
+        <li><a href="#sobre" class="mob-link">Sobre</a></li>
+        <li><a href="#como-funciona" class="mob-link">Como funciona</a></li>
+        <li><a href="#investimento" class="mob-link">Investimento</a></li>
+        <li><a href="#faq" class="mob-link">FAQ</a></li>
+        <li><a href="#contato" class="mob-link">Contato</a></li>
+      </ul>
+      <button class="btn-primary mob-cta"
+        onclick="window.open('https://wa.me/5586981129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!', '_blank')">
+        <i class="ti ti-brand-whatsapp"></i> Chamar no WhatsApp
+      </button>
+    </div>
   </header>
 
-  <!-- Conteúdo Principal -->
   <main id="conteudo-principal">
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="inicio">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-layout">
           <div class="hero-content reveal active">
-            <span class="hero-badge" id="hero-loc-badge">
+            <span class="hero-badge">
               <i class="ti ti-map-pin" aria-hidden="true"></i> Teresina, PI
             </span>
-            <h1>Sua equipe focada no que importa. A rotina repetitiva fica com a gente.</h1>
-            <p>Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha, menos retrabalho — mais tempo pro que gera resultado de verdade.
-            </p>
+            <h1>Sua equipe focada no que importa.<br><span class="gold-text">A rotina repetitiva fica com a
+                gente.</span></h1>
+            <p>Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha,
+              menos retrabalho — mais tempo pro que gera resultado de verdade.</p>
             <div class="hero-btns">
               <button class="btn-primary" id="hero-cta-principal"
-                onclick="window.open('https://wa.me/5586966663559?text=Olá!%20Vim%20do%20site%20e%20quero%20conversar%20sobre%20automação%20e%20IA.', '_blank')"
-                aria-label="Chamar no WhatsApp para conversar sobre automação">
-                Bater um papo no WhatsApp
+                onclick="window.open('https://wa.me/5586981129331?text=Olá!%20Vim%20do%20site%20e%20quero%20conversar%20sobre%20automação%20e%20IA.', '_blank')">
+                <i class="ti ti-brand-whatsapp"></i> Bater um papo no WhatsApp
               </button>
               <button class="btn-secondary" id="hero-cta-secundario"
-                onclick="document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'})"
-                aria-label="Rolar para a seção como funciona">
-                Ver como funciona
+                onclick="document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'})">
+                Ver como funciona <i class="ti ti-arrow-down"></i>
               </button>
+            </div>
+            <div class="hero-trust">
+              <span class="trust-item"><i class="ti ti-shield-check"></i> Sem contrato longo prazo</span>
+              <span class="trust-item"><i class="ti ti-clock"></i> Resposta em até 2h</span>
+              <span class="trust-item"><i class="ti ti-heart-handshake"></i> 30 dias de garantia</span>
             </div>
           </div>
           <div class="hero-visual reveal active">
-            <img src="assets/umbrella_circuit.png" alt="Guarda-chuva tecnológico de circuitos integrados"
-              class="hero-illustration">
+            <!-- Animated illustration SVG -->
+            <div class="hero-illo-wrap">
+              <svg class="hero-illo" viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background glow -->
+                <circle cx="210" cy="190" r="160" fill="rgba(223,169,90,0.04)" />
+                <!-- Large umbrella -->
+                <path d="M210 40 C120 40 60 100 60 180 L210 180 L360 180 C360 100 300 40 210 40Z"
+                  fill="rgba(20,19,17,0.8)" stroke="#dfa95a" stroke-width="2.5" />
+                <!-- Ribs -->
+                <line x1="210" y1="40" x2="210" y2="180" stroke="#dfa95a" stroke-width="2" opacity="0.5" />
+                <line x1="155" y1="52" x2="175" y2="180" stroke="#dfa95a" stroke-width="1.5" opacity="0.35" />
+                <line x1="265" y1="52" x2="245" y2="180" stroke="#dfa95a" stroke-width="1.5" opacity="0.35" />
+                <line x1="105" y1="90" x2="140" y2="180" stroke="#dfa95a" stroke-width="1.2" opacity="0.25" />
+                <line x1="315" y1="90" x2="280" y2="180" stroke="#dfa95a" stroke-width="1.2" opacity="0.25" />
+                <!-- Handle -->
+                <path d="M210 180 L210 310 Q210 330 190 330 Q170 330 170 310" fill="none" stroke="#dfa95a"
+                  stroke-width="3" stroke-linecap="round" />
+                <!-- Robot body -->
+                <rect x="175" y="180" width="70" height="58" rx="12" fill="rgba(20,19,17,0.9)" stroke="#dfa95a"
+                  stroke-width="2" />
+                <!-- Screen/face -->
+                <rect x="183" y="188" width="54" height="36" rx="6" fill="rgba(223,169,90,0.06)"
+                  stroke="rgba(223,169,90,0.3)" stroke-width="1" />
+                <!-- Eyes -->
+                <circle cx="198" cy="202" r="6" fill="rgba(20,19,17,0.9)" stroke="#dfa95a" stroke-width="1.5" />
+                <circle cx="222" cy="202" r="6" fill="rgba(20,19,17,0.9)" stroke="#dfa95a" stroke-width="1.5" />
+                <circle cx="199" cy="201" r="2.5" fill="#dfa95a" />
+                <circle cx="223" cy="201" r="2.5" fill="#dfa95a" />
+                <!-- Smile -->
+                <path d="M198 214 Q210 221 222 214" stroke="#dfa95a" stroke-width="2" stroke-linecap="round"
+                  fill="none" />
+                <!-- Antenna -->
+                <line x1="210" y1="180" x2="210" y2="163" stroke="#dfa95a" stroke-width="2" />
+                <circle cx="210" cy="160" r="4" fill="none" stroke="#dfa95a" stroke-width="1.5" />
+                <circle cx="210" cy="160" r="1.5" fill="#dfa95a" />
+                <!-- Arms -->
+                <rect x="145" y="190" width="30" height="16" rx="8" fill="rgba(20,19,17,0.9)" stroke="#dfa95a"
+                  stroke-width="1.8" />
+                <rect x="245" y="190" width="30" height="16" rx="8" fill="rgba(20,19,17,0.9)" stroke="#dfa95a"
+                  stroke-width="1.8" />
+                <!-- Legs -->
+                <rect x="185" y="238" width="16" height="28" rx="8" fill="rgba(20,19,17,0.9)" stroke="#dfa95a"
+                  stroke-width="1.8" />
+                <rect x="219" y="238" width="16" height="28" rx="8" fill="rgba(20,19,17,0.9)" stroke="#dfa95a"
+                  stroke-width="1.8" />
+                <!-- Floating data nodes -->
+                <circle cx="80" cy="130" r="8" fill="rgba(223,169,90,0.1)" stroke="#dfa95a" stroke-width="1.5"
+                  class="float-node" />
+                <circle cx="340" cy="120" r="6" fill="rgba(223,169,90,0.1)" stroke="#dfa95a" stroke-width="1.2"
+                  class="float-node" style="animation-delay:1s" />
+                <circle cx="360" cy="220" r="5" fill="rgba(223,169,90,0.08)" stroke="#dfa95a" stroke-width="1"
+                  class="float-node" style="animation-delay:2s" />
+                <circle cx="65" cy="240" r="4" fill="rgba(223,169,90,0.08)" stroke="#dfa95a" stroke-width="1"
+                  class="float-node" style="animation-delay:0.5s" />
+                <!-- Connection lines -->
+                <line x1="88" y1="130" x2="145" y2="198" stroke="#dfa95a" stroke-width="1" opacity="0.2"
+                  stroke-dasharray="4 4" />
+                <line x1="334" y1="120" x2="275" y2="198" stroke="#dfa95a" stroke-width="1" opacity="0.2"
+                  stroke-dasharray="4 4" />
+                <!-- Stars/sparkles -->
+                <path d="M320 60 L322 56 L324 60 L328 62 L324 64 L322 68 L320 64 L316 62 Z" fill="#dfa95a"
+                  opacity="0.6" />
+                <path d="M95 85 L96.5 82 L98 85 L101 86.5 L98 88 L96.5 91 L95 88 L92 86.5 Z" fill="#dfa95a"
+                  opacity="0.4" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -111,14 +226,14 @@
     <!-- Stats Bar -->
     <div class="wrap">
       <div class="stats-bar reveal">
-        <div class="stat" id="stat-produtividade">
+        <div class="stat">
           <div class="stat-top">
             <div class="stat-icon-group">
               <div class="bar bar-1"></div>
               <div class="bar bar-2"></div>
               <div class="bar bar-3"></div>
             </div>
-            <span class="stat-num" aria-label="Três vezes mais">3×</span>
+            <span class="stat-num">3×</span>
             <div class="stat-icon-group">
               <div class="bar bar-1"></div>
               <div class="bar bar-2"></div>
@@ -127,7 +242,7 @@
           </div>
           <span class="stat-label">mais produtividade na rotina operacional</span>
         </div>
-        <div class="stat" id="stat-ia">
+        <div class="stat">
           <div class="stat-top">
             <div class="stat-icon-group">
               <div class="bar bar-1"></div>
@@ -143,7 +258,7 @@
           </div>
           <span class="stat-label">integrada ao jeito que você já trabalha</span>
         </div>
-        <div class="stat" id="stat-foco">
+        <div class="stat">
           <div class="stat-top">
             <span class="stat-num">100%</span>
           </div>
@@ -152,7 +267,7 @@
       </div>
     </div>
 
-    <!-- O que fazemos / Serviços -->
+    <!-- Serviços -->
     <section id="servicos" class="reveal">
       <div class="wrap">
         <div class="section-header">
@@ -161,76 +276,105 @@
           <p class="section-sub">Da estratégia à execução: entregamos automações inteligentes e soluções focadas na
             evolução do seu negócio.</p>
         </div>
-
         <div class="services-grid">
-          <!-- Card IA -->
-          <div class="service-card" id="srv-ia">
-            <div>
-              <div class="s-icon" aria-hidden="true">
-                <i class="ti ti-brain"></i>
-              </div>
-              <h3>Agentes de IA que trabalham por você</h3>
-              <p>Chatbots no WhatsApp que atendem, qualificam leads e vendem 24h — com a cara e o tom de voz da sua empresa. Sem parecer robô.</p>
-            </div>
+          <div class="service-card">
+            <div class="s-icon"><i class="ti ti-brain"></i></div>
+            <h3>Agentes de IA que trabalham por você</h3>
+            <p>Criamos assistentes inteligentes que respondem clientes, analisam dados, geram relatórios e tomam
+              decisões simples — sem você precisar estar por perto.</p>
           </div>
-
-          <!-- Card Automação -->
-          <div class="service-card" id="srv-automacao">
-            <div>
-              <div class="s-icon" aria-hidden="true">
-                <i class="ti ti-settings-automation"></i>
-              </div>
-              <h3>Automação que conecta tudo</h3>
-              <p>Seus sistemas favoritos conversando entre si: CRM, planilhas, e-mail, WhatsApp. Tudo rodando sozinho enquanto você foca no estratégico.</p>
-            </div>
+          <div class="service-card">
+            <div class="s-icon"><i class="ti ti-robot"></i></div>
+            <h3>Automação de processos repetitivos</h3>
+            <p>Transferências de dados, emissão de documentos, lançamentos em sistemas, follow-ups automáticos. Tudo que
+              consome tempo sem gerar valor, a gente automatiza.</p>
           </div>
-
-          <!-- Card CRM -->
-          <div class="service-card" id="srv-crm">
-            <div>
-              <div class="s-icon" aria-hidden="true">
-                <i class="ti ti-users"></i>
-              </div>
-              <h3>CRM que não deixa lead escapar</h3>
-              <p>Organizamos seu funil de vendas pra que nenhum contato se perca. Follow-up automático, lembretes inteligentes e proposta na hora certa.</p>
-            </div>
+          <div class="service-card">
+            <div class="s-icon"><i class="ti ti-plug-connected"></i></div>
+            <h3>Integrações entre sistemas</h3>
+            <p>Seu CRM não conversa com seu ERP? Seu WhatsApp não alimenta sua planilha? A gente conecta os pontos — sem
+              precisar trocar nenhum sistema que você já usa.</p>
           </div>
-
-          <!-- Card Consultoria -->
-          <div class="service-card" id="srv-consultoria">
-            <div>
-              <div class="s-icon" aria-hidden="true">
-                <i class="ti ti-world"></i>
-              </div>
-              <h3>Diagnóstico sem enrolação</h3>
-              <p>Sentamos juntos, mapeamos onde sua operação trava e desenhamos o caminho mais curto pra resolver — com prazo e retorno claros.</p>
-            </div>
+          <div class="service-card">
+            <div class="s-icon"><i class="ti ti-chart-dots"></i></div>
+            <h3>Dashboards e visibilidade de dados</h3>
+            <p>Transformamos dados espalhados em visões claras e acionáveis. Indicadores de vendas, operação, finanças —
+              tudo num painel que você acessa do celular.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quem Somos / Storytelling -->
+    <!-- Sobre nós -->
     <section id="sobre" class="reveal">
       <div class="wrap">
-        <div class="story-layout">
-          <div class="story-visual">
-            <div class="story-image-card">
-              <img src="assets/meeting_tech.png" alt="Reunião de tecnologia da equipe Umbrella" class="story-img">
-              <div class="story-image-overlay">
-                <span class="story-overlay-location">Teresina, PI</span>
-                <p class="story-overlay-quote">"Tecnologia boa é aquela que some — funciona nos bastidores enquanto você cuida das pessoas."</p>
-                <span class="story-overlay-author">Equipe Umbrella<br><small>Teresina, PI</small></span>
+        <div class="sobre-layout">
+          <div class="sobre-visual">
+            <div class="sobre-card-wrap">
+              <!-- Logo grande centralizada -->
+              <div class="sobre-logo-card">
+                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="100" cy="100" r="95" fill="rgba(20,19,17,0.9)" stroke="rgba(223,169,90,0.2)"
+                    stroke-width="1" />
+                  <path d="M100 20 C58 20 25 55 25 100 L100 100 L175 100 C175 55 142 20 100 20Z" fill="none"
+                    stroke="#dfa95a" stroke-width="2.5" />
+                  <line x1="100" y1="20" x2="100" y2="100" stroke="#dfa95a" stroke-width="2" opacity="0.4" />
+                  <line x1="70" y1="28" x2="82" y2="100" stroke="#dfa95a" stroke-width="1.5" opacity="0.3" />
+                  <line x1="130" y1="28" x2="118" y2="100" stroke="#dfa95a" stroke-width="1.5" opacity="0.3" />
+                  <line x1="45" y1="58" x2="65" y2="100" stroke="#dfa95a" stroke-width="1.2" opacity="0.2" />
+                  <line x1="155" y1="58" x2="135" y2="100" stroke="#dfa95a" stroke-width="1.2" opacity="0.2" />
+                  <path d="M100 100 L100 160 Q100 168 92 168 Q84 168 84 160" fill="none" stroke="#dfa95a"
+                    stroke-width="2.5" stroke-linecap="round" />
+                  <rect x="74" y="100" width="52" height="40" rx="9" fill="rgba(20,19,17,0.95)" stroke="#dfa95a"
+                    stroke-width="2" />
+                  <circle cx="90" cy="116" r="5" fill="#dfa95a" />
+                  <circle cx="110" cy="116" r="5" fill="#dfa95a" />
+                  <path d="M90 128 Q100 134 110 128" stroke="#dfa95a" stroke-width="2" stroke-linecap="round"
+                    fill="none" />
+                  <line x1="100" y1="100" x2="100" y2="87" stroke="#dfa95a" stroke-width="2" />
+                  <circle cx="100" cy="84" r="4" fill="#dfa95a" />
+                  <text x="100" y="185" text-anchor="middle" font-family="Outfit,sans-serif" font-weight="800"
+                    font-size="14" fill="#dfa95a" letter-spacing="4">UMBRELLA</text>
+                </svg>
+              </div>
+              <div class="sobre-badge-tag">
+                <i class="ti ti-map-pin"></i> Feito em Teresina, PI
               </div>
             </div>
           </div>
-          <div class="story-content">
-            <span class="section-label">Quem somos</span>
-            <h2 class="section-title">A gente existe pra sua equipe trabalhar menos e render mais</h2>
-            <p>Nascemos em Teresina com um incômodo: empresas locais perdendo horas em tarefas que uma automação bem feita resolve em segundos. A gente acredita que tecnologia boa é a que some — funciona nos bastidores enquanto sua equipe cuida das pessoas.</p>
-            <p>Não vendemos software de prateleira. Cada projeto começa com um papo, um café e um diagnóstico honesto. Se automação não for a resposta, a gente fala.</p>
-            <div class="story-globe-bg">
-              <img src="assets/globe_circuit.png" alt="Globo digital de circuitos" class="globe-bg-img">
+          <div class="sobre-content">
+            <span class="section-label">Sobre nós</span>
+            <h2 class="section-title">Tecnologia que faz sentido pro seu dia a dia</h2>
+            <p>A Umbrella nasceu em Teresina com uma missão simples: trazer o que há de mais moderno em automação e
+              inteligência artificial para empresas que não têm tempo a perder.</p>
+            <p>Acreditamos que tecnologia não serve pra complicar — serve pra liberar as pessoas das tarefas que não
+              precisam delas. Nossa especialidade é entender como a sua operação funciona de verdade e construir
+              soluções que se encaixam no seu jeito de trabalhar.</p>
+            <p>Somos uma empresa nova, mas construída por pessoas com experiência real em automação, desenvolvimento de
+              sistemas e consultoria de processos. Aqui você não fala com um SDR nem cai em fila de suporte — fala
+              direto com quem vai resolver.</p>
+            <div class="sobre-pillars">
+              <div class="pillar">
+                <div class="pillar-icon"><i class="ti ti-eye"></i></div>
+                <div>
+                  <strong>Transparência</strong>
+                  <p>Se não for a solução certa pro seu momento, a gente fala.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="ti ti-hammer"></i></div>
+                <div>
+                  <strong>Foco em resultado</strong>
+                  <p>Entregamos automação que funciona, não promessas de slides.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="ti ti-users"></i></div>
+                <div>
+                  <strong>Relação direta</strong>
+                  <p>Acesso direto à equipe técnica, do diagnóstico à entrega.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -242,36 +386,93 @@
       <div class="wrap">
         <div class="section-header">
           <span class="section-label">Como funciona</span>
-          <h2 class="section-title">Do papo ao resultado, sem complicação</h2>
-          <p class="section-sub">Quatro etapas simples — e você acompanha tudo de perto.</p>
+          <h2 class="section-title">Do papo inicial à automação rodando</h2>
+          <p class="section-sub">Sem burocracia. Processo claro, etapas definidas e você sempre sabendo o que acontece.
+          </p>
         </div>
-
         <div class="how-grid">
-          <div class="how-step" id="step-1">
-            <span class="how-step-num" aria-hidden="true">01</span>
-            <h4>Papo & Café ☕</h4>
-            <p>A gente senta contigo (pode ser por call também), ouve suas dores e identifica onde dá pra ganhar tempo e dinheiro.</p>
+          <div class="how-step">
+            <span class="how-step-num">01</span>
+            <div class="how-icon"><i class="ti ti-messages"></i></div>
+            <h4>Diagnóstico gratuito</h4>
+            <p>Conversamos sobre sua operação. Identificamos os gargalos, os processos mais lentos e onde a automação
+              traz retorno mais rápido.</p>
           </div>
-          <div class="how-step" id="step-2">
-            <span class="how-step-num" aria-hidden="true">02</span>
-            <h4>Proposta na mesa 📋</h4>
-            <p>Montamos uma proposta enxuta com escopo fechado, prazos reais e estimativa de quanto você vai economizar.</p>
+          <div class="how-step">
+            <span class="how-step-num">02</span>
+            <div class="how-icon"><i class="ti ti-list-check"></i></div>
+            <h4>Proposta sob medida</h4>
+            <p>Apresentamos um plano claro: o que será automatizado, como, em quanto tempo e com qual investimento. Sem
+              surpresas no caminho.</p>
           </div>
-          <div class="how-step" id="step-3">
-            <span class="how-step-num" aria-hidden="true">03</span>
-            <h4>Mãos à obra 🔧</h4>
-            <p>Desenvolvemos rápido, com atualizações semanais e testes reais dos fluxos antes de ligar tudo.</p>
+          <div class="how-step">
+            <span class="how-step-num">03</span>
+            <div class="how-icon"><i class="ti ti-code"></i></div>
+            <h4>Desenvolvimento e testes</h4>
+            <p>Construímos a solução e testamos junto com você em ambiente seguro antes de colocar em produção. Sua
+              operação não para.</p>
           </div>
-          <div class="how-step" id="step-4">
-            <span class="how-step-num" aria-hidden="true">04</span>
-            <h4>Suporte de verdade 🤝</h4>
-            <p>Treinamos sua equipe, ficamos por perto e ajustamos o que precisar. Não sumimos depois de entregar.</p>
+          <div class="how-step">
+            <span class="how-step-num">04</span>
+            <div class="how-icon"><i class="ti ti-rocket"></i></div>
+            <h4>Entrega + suporte</h4>
+            <p>A automação vai ao ar. Treinamos sua equipe e ficamos 30 dias ao lado para garantir que tudo funcione
+              perfeitamente.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Planos / Investimento -->
+    <!-- Depoimentos / Prova social -->
+    <section id="depoimentos" class="reveal">
+      <div class="wrap">
+        <div class="section-header" style="max-width:100%;">
+          <span class="section-label">Depoimentos</span>
+          <h2 class="section-title">O que nossos primeiros clientes vão dizer</h2>
+          <p class="section-sub">Somos uma empresa nova e construímos cada projeto com o cuidado de quem ainda está
+            formando sua reputação. Esses espaços serão preenchidos em breve — com nomes reais e resultados
+            verificáveis.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-placeholder">
+            <div class="tp-avatar"><i class="ti ti-user"></i></div>
+            <div class="tp-content">
+              <div class="tp-stars">★★★★★</div>
+              <p class="tp-text">Depoimento real de cliente em breve.</p>
+              <span class="tp-name">— Primeiro cliente da Umbrella</span>
+            </div>
+            <div class="tp-coming">Em breve</div>
+          </div>
+          <div class="testimonial-placeholder">
+            <div class="tp-avatar"><i class="ti ti-user"></i></div>
+            <div class="tp-content">
+              <div class="tp-stars">★★★★★</div>
+              <p class="tp-text">Resultado real de uma automação real.</p>
+              <span class="tp-name">— Segundo cliente da Umbrella</span>
+            </div>
+            <div class="tp-coming">Em breve</div>
+          </div>
+          <div class="testimonial-placeholder">
+            <div class="tp-avatar"><i class="ti ti-user"></i></div>
+            <div class="tp-content">
+              <div class="tp-stars">★★★★★</div>
+              <p class="tp-text">Impacto mensurável na operação da empresa.</p>
+              <span class="tp-name">— Terceiro cliente da Umbrella</span>
+            </div>
+            <div class="tp-coming">Em breve</div>
+          </div>
+        </div>
+        <div class="testimonials-cta">
+          <p>Quer ser um dos nossos primeiros casos de sucesso?</p>
+          <button class="btn-primary"
+            onclick="window.open('https://wa.me/5586981129331?text=Olá!%20Quero%20ser%20um%20dos%20primeiros%20clientes%20da%20Umbrella.', '_blank')">
+            <i class="ti ti-brand-whatsapp"></i> Quero ser o primeiro
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investimento -->
     <section id="investimento" class="reveal">
       <div class="wrap">
         <div class="section-header">
@@ -279,12 +480,11 @@
           <h2 class="section-title">Invista no tamanho certo pro seu momento</h2>
           <p class="section-sub">Sem pacote engessado. A gente adapta ao que faz sentido pra sua empresa agora.</p>
         </div>
-
         <div class="pricing-grid">
-          <!-- Consultoria Pontual -->
-          <div class="price-card" id="plan-consultoria">
+          <div class="price-card">
             <h3>Diagnóstico Rápido</h3>
-            <p class="desc">Quer saber onde sua operação tá travando? A gente mapeia os gargalos e entrega um plano de ação claro — sem compromisso de longo prazo.</p>
+            <p class="desc">Quer saber onde sua operação tá travando? A gente mapeia os gargalos e entrega um plano de
+              ação claro — sem compromisso de longo prazo.</p>
             <div class="price">Sob consulta</div>
             <ul class="price-features">
               <li>Mapeamento de gargalos</li>
@@ -292,17 +492,15 @@
               <li>Recomendação de ferramentas</li>
               <li>Reunião de entrega e alinhamento</li>
             </ul>
-            <button class="btn-secondary" id="btn-cta-plan-1"
-              onclick="window.open('https://wa.me/5586966663559?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Diagnóstico%20Rápido.', '_blank')"
-              aria-label="Chamar no WhatsApp para solicitar diagnóstico rápido">
+            <button class="btn-secondary"
+              onclick="window.open('https://wa.me/5586981129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Diagnóstico%20Rápido.', '_blank')">
               Quero um diagnóstico
             </button>
           </div>
-
-          <!-- Automação & IA -->
-          <div class="price-card featured" id="plan-automacao">
+          <div class="price-card featured">
             <h3>Projeto sob medida</h3>
-            <p class="desc">Do zero à automação rodando: desenhamos, desenvolvemos e entregamos a solução completa. Com treinamento da equipe e 30 dias de suporte inclusos.</p>
+            <p class="desc">Do zero à automação rodando: desenhamos, desenvolvemos e entregamos a solução completa. Com
+              treinamento da equipe e 30 dias de suporte inclusos.</p>
             <div class="price">Sob consulta</div>
             <ul class="price-features">
               <li>Escopo fechado personalizado</li>
@@ -311,17 +509,15 @@
               <li>Treinamento operacional detalhado</li>
               <li>30 dias de garantia e suporte</li>
             </ul>
-            <button class="btn-primary" id="btn-cta-plan-2"
-              onclick="window.open('https://wa.me/5586966663559?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%20sob%20medida%20de%20automação.', '_blank')"
-              aria-label="Chamar no WhatsApp para começar projeto sob medida">
+            <button class="btn-primary"
+              onclick="window.open('https://wa.me/5586981129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%20sob%20medida%20de%20automação.', '_blank')">
               Começar meu projeto
             </button>
           </div>
-
-          <!-- Parceria Mensal -->
-          <div class="price-card" id="plan-mensal">
+          <div class="price-card">
             <h3>Parceiro de tecnologia</h3>
-            <p class="desc">Suporte técnico, monitoramento e melhorias contínuas. Como ter uma equipe de tecnologia sem precisar contratar.</p>
+            <p class="desc">Suporte técnico, monitoramento e melhorias contínuas. Como ter uma equipe de tecnologia sem
+              precisar contratar.</p>
             <div class="price">Sob consulta<span> / mês</span></div>
             <ul class="price-features">
               <li>Horas exclusivas de desenvolvimento</li>
@@ -329,11 +525,87 @@
               <li>Atualizações e melhorias contínuas</li>
               <li>Relatório mensal de performance</li>
             </ul>
-            <button class="btn-secondary" id="btn-cta-plan-3"
-              onclick="window.open('https://wa.me/5586966663559?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20Parceiro%20de%20Tecnologia%20mensal.', '_blank')"
-              aria-label="Chamar no WhatsApp para contratar parceiro de tecnologia fixo">
+            <button class="btn-secondary"
+              onclick="window.open('https://wa.me/5586981129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20Parceiro%20de%20Tecnologia%20mensal.', '_blank')">
               Quero um parceiro fixo
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="reveal">
+      <div class="wrap">
+        <div class="section-header" style="max-width:100%; text-align:center; margin: 0 auto 60px;">
+          <span class="section-label" style="justify-content:center;">Perguntas Frequentes</span>
+          <h2 class="section-title">Tire suas dúvidas antes de chamar</h2>
+          <p class="section-sub">As perguntas mais comuns de quem está considerando automação pela primeira vez.</p>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Minha empresa precisa ser grande pra valer a pena automatizar?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Não. Pequenas e médias empresas são as que mais se beneficiam — porque cada hora economizada tem peso
+                direto na operação. Já ajudamos negócios com 2 pessoas a ganhar o equivalente a um funcionário extra em
+                produtividade.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Preciso trocar os sistemas que já uso?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Quase nunca. Nossa especialidade é conectar e automatizar o que você já tem — seja WhatsApp, planilha,
+                Google, ERP ou qualquer outro sistema. Só recomendamos troca quando realmente faz sentido financeiro.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Em quanto tempo fica pronto?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Depende da complexidade. Automações simples ficam prontas em 1 a 2 semanas. Projetos maiores, com
+                múltiplas integrações, costumam levar de 4 a 8 semanas. Você sabe o prazo antes de assinar qualquer
+                coisa.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              E se a automação parar de funcionar depois?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Todo projeto tem 30 dias de garantia inclusos — qualquer problema, a gente resolve sem custo. E temos
+                plano mensal de parceiro para quem quer monitoramento contínuo e melhorias ao longo do tempo.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Vocês trabalham só com empresas de Teresina?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Somos de Teresina e adoramos atender localmente. Mas automação é 100% remota por natureza — atendemos
+                empresas de qualquer lugar do Brasil sem problema nenhum.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Qual o investimento mínimo pra começar?
+              <i class="ti ti-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-a">
+              <p>Não temos um valor fixo mínimo porque cada projeto é diferente. O diagnóstico inicial é gratuito — nele
+                a gente entende sua necessidade e apresenta uma proposta que faça sentido pro seu momento, seja pequeno
+                ou grande.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -342,107 +614,215 @@
     <!-- Contato -->
     <section id="contato" class="reveal">
       <div class="wrap">
-        <div class="contact-box">
-          <span class="section-label" style="justify-content: center; margin-bottom: 24px;">Bora conversar?</span>
-          <h2>Quer saber se automação faz sentido pro seu negócio?</h2>
-          <p>Manda uma mensagem sem compromisso. A gente responde rápido e com sinceridade — se automação não for a solução, a gente fala também.</p>
-
-          <a href="https://wa.me/5586966663559?text=Olá!%20Quero%20conversar%20sobre%20automação%20para%20minha%20empresa."
-            target="_blank"
-            class="btn-primary" id="cta-email-contato"
-            style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-            <i class="ti ti-brand-whatsapp" aria-hidden="true"></i> Mandar mensagem no WhatsApp
-          </a>
-
-          <div class="contact-info">
-            <div class="contact-chip" id="chip-email">
-              <i class="ti ti-mail" aria-hidden="true" style="color: var(--accent-terracotta);"></i>
-              <strong>emaildaumbrellaconsultoria@gmail.com</strong>
+        <div class="contact-layout">
+          <!-- Coluna CTA -->
+          <div class="contact-cta-col">
+            <span class="section-label">Bora conversar?</span>
+            <h2>Quer saber se automação faz sentido pro seu negócio?</h2>
+            <p>Manda uma mensagem sem compromisso. A gente responde rápido e com sinceridade — se automação não for a
+              solução, a gente fala também.</p>
+            <a href="https://wa.me/5586981129331?text=Olá!%20Quero%20conversar%20sobre%20automação%20para%20minha%20empresa."
+              target="_blank" class="btn-primary whatsapp-btn">
+              <i class="ti ti-brand-whatsapp"></i> Chamar no WhatsApp agora
+            </a>
+            <div class="contact-info">
+              <div class="contact-chip">
+                <i class="ti ti-mail" style="color:var(--accent-terracotta)"></i>
+                <strong>emaildaumbrellaconsultoria@gmail.com</strong>
+              </div>
+              <div class="contact-chip">
+                <i class="ti ti-map-pin" style="color:var(--accent-forest)"></i>
+                <strong>Teresina · PI</strong>
+              </div>
             </div>
-            <div class="contact-chip" id="chip-local">
-              <i class="ti ti-map-pin" aria-hidden="true" style="color: var(--accent-forest);"></i>
-              <strong>Teresina · PI</strong>
+          </div>
+          <!-- Formulário -->
+          <div class="contact-form-col">
+            <div class="contact-form-card">
+              <h3>Ou preencha e a gente te chama</h3>
+              <p class="form-sub">Sem spam. Prometemos responder em até 2 horas nos dias úteis.</p>
+              <div id="form-success" class="form-success" style="display:none;">
+                <i class="ti ti-circle-check"></i>
+                <strong>Mensagem enviada!</strong>
+                <span>A gente vai te responder em até 2 horas.</span>
+              </div>
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="f-nome">Nome</label>
+                  <input type="text" id="f-nome" name="nome" placeholder="Seu nome" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="f-empresa">Empresa</label>
+                  <input type="text" id="f-empresa" name="empresa" placeholder="Nome da empresa"
+                    autocomplete="organization">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="f-email">E-mail</label>
+                    <input type="email" id="f-email" name="email" placeholder="seu@email.com" required
+                      autocomplete="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="f-tel">WhatsApp</label>
+                    <input type="tel" id="f-tel" name="telefone" placeholder="(86) 9 ????-????" autocomplete="tel">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="f-msg">Qual processo você quer automatizar?</label>
+                  <textarea id="f-msg" name="mensagem"
+                    placeholder="Ex: quero automatizar o envio de propostas para clientes..." rows="4"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit" id="form-btn">
+                  <i class="ti ti-send"></i> Enviar mensagem
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Rodapé -->
+  <!-- Footer -->
   <footer>
     <div class="wrap">
       <div class="footer-layout">
         <div class="footer-left">
-          Comece agora: <a href="https://wa.me/5586966663559" target="_blank" class="footer-phone">(86) 9 6666-3559</a>
+          Comece agora: <a href="https://wa.me/5586981129331" target="_blank" class="footer-phone">(86) 9 8112-9331</a>
         </div>
         <div class="footer-nav">
-          <a href="#contato">Contato</a>
           <a href="#servicos">Serviços</a>
-          <a href="#sobre">Sobre nós</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
         </div>
       </div>
       <div class="footer-sub-layout">
         <div class="footer-logo">UMBRELLA<span>.</span></div>
-        <div class="footer-txt" id="footer-copyright">© 2026 Umbrella Soluções Digitais · Teresina, PI</div>
-        <div class="footer-txt" id="footer-cnpj">CNPJ: em abertura</div>
+        <div class="footer-txt">© 2026 Umbrella Soluções Digitais · Teresina, PI</div>
+        <div class="footer-txt">CNPJ: em abertura</div>
       </div>
     </div>
   </footer>
 
-  <!-- Chatbot Flutuante -->
-  <a href="https://wa.me/5586966663559?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!"
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5586981129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!"
     class="chatbot-float" target="_blank" aria-label="Falar com especialista no WhatsApp">
     <div class="chatbot-tooltip">Fale com a gente! 💬</div>
     <div class="chatbot-bubble">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="8" y="12" width="32" height="26" rx="8" fill="currentColor" opacity="0.15" />
         <rect x="8" y="12" width="32" height="26" rx="8" stroke="currentColor" stroke-width="3" />
-        <!-- Antenna -->
         <path
           d="M24 12V6M24 6C25.657 6 27 4.657 27 3C27 1.343 25.657 0 24 0C22.343 0 21 1.343 21 3C21 4.657 22.343 6 24 6Z"
           fill="currentColor" />
         <path d="M24 12V6" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-        <!-- Eyes -->
         <circle cx="18" cy="22" r="3" fill="currentColor" />
         <circle cx="30" cy="22" r="3" fill="currentColor" />
-        <!-- Smile -->
         <path d="M20 29C22 31 26 31 28 29" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-        <!-- Ears / Bolts -->
         <rect x="4" y="21" width="4" height="8" rx="2" fill="currentColor" />
         <rect x="40" y="21" width="4" height="8" rx="2" fill="currentColor" />
       </svg>
     </div>
   </a>
 
-  <!-- Script para Interatividade e Scroll Reveal -->
   <script>
-    // Alterar o cabeçalho ao rolar a página
+    // Header scroll
     window.addEventListener('scroll', () => {
       const header = document.getElementById('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Efeito Reveal (Rolagem das Seções)
+    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 120; // Pixels visíveis para disparar
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add('active');
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('active');
         }
-      }
+      });
     };
     window.addEventListener('scroll', revealOnScroll);
-
-    // Disparar uma vez no carregamento
     window.addEventListener('load', revealOnScroll);
+
+    // Hambúrguer menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Fechar menu ao clicar em link
+    document.querySelectorAll('.mob-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+        mobileMenu.setAttribute('aria-hidden', true);
+        document.body.style.overflow = '';
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Fechar todos
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', false));
+        // Abrir atual se estava fechado
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', true);
+        }
+      });
+    });
+
+    // Formulário — abre WhatsApp com os dados
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('f-nome').value.trim();
+      const empresa = document.getElementById('f-empresa').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      const tel = document.getElementById('f-tel').value.trim();
+      const msg = document.getElementById('f-msg').value.trim();
+
+      if (!nome || !email || !msg) {
+        // Validação simples
+        if (!nome) document.getElementById('f-nome').style.borderColor = 'var(--accent-terracotta)';
+        if (!email) document.getElementById('f-email').style.borderColor = 'var(--accent-terracotta)';
+        if (!msg) document.getElementById('f-msg').style.borderColor = 'var(--accent-terracotta)';
+        return;
+      }
+
+      // Montar mensagem WhatsApp
+      let waMsg = `Olá! Vim do formulário do site.\n\n*Nome:* ${nome}`;
+      if (empresa) waMsg += `\n*Empresa:* ${empresa}`;
+      waMsg += `\n*E-mail:* ${email}`;
+      if (tel) waMsg += `\n*WhatsApp:* ${tel}`;
+      waMsg += `\n\n*Mensagem:* ${msg}`;
+
+      // Mostrar sucesso e abrir WA
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'flex';
+      setTimeout(() => {
+        window.open('https://wa.me/5586981129331?text=' + encodeURIComponent(waMsg), '_blank');
+      }, 800);
+    });
+
+    // Limpar borda vermelha ao digitar
+    ['f-nome', 'f-email', 'f-msg'].forEach(id => {
+      document.getElementById(id).addEventListener('input', function () {
+        this.style.borderColor = '';
+      });
+    });
   </script>
 </body>
 
