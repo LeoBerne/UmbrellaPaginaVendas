@@ -5,27 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha, menos retrabalho — mais tempo pro que gera resultado de verdade.">
+    content="Recepcionista IA, agendamento e cobrança automática no WhatsApp — Umbrella. Catálogo de automações de IA prontas para clínicas, oficinas e lojas.">
   <meta name="keywords"
-    content="Inteligência Artificial, Automação, CRM, Consultoria de TI, Teresina, Piauí, Umbrella, Automação Teresina">
+    content="Inteligência Artificial, Automação, CRM, Consultoria de TI, Teresina, Piauí, Umbrella, Automação Teresina, Recepcionista IA, Cobrança Automática WhatsApp">
   <meta name="author" content="Umbrella">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://umbrelladigital.com.br/">
-  <meta property="og:title" content="Umbrella — Automação & IA sob medida em Teresina">
+  <meta property="og:title" content="Recepcionista IA, agendamento e cobrança automática no WhatsApp — Umbrella">
   <meta property="og:description"
-    content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha, menos retrabalho — mais tempo pro que gera resultado de verdade.">
+    content="Catálogo de automações com inteligência artificial para clínicas, oficinas e lojas. Tenha recepcionista IA, agendamento no Google Calendar e cobrança automática de inadimplentes.">
   <meta property="og:image" content="https://umbrelladigital.com.br/assets/og-image.png">
 
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://umbrelladigital.com.br/">
-  <meta property="twitter:title" content="Umbrella — Automação & IA sob medida em Teresina">
+  <meta property="twitter:title" content="Recepcionista IA, agendamento e cobrança automática no WhatsApp — Umbrella">
   <meta property="twitter:description"
-    content="Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina.">
+    content="Catálogo de automações com inteligência artificial para clínicas, oficinas e lojas. Tenha recepcionista IA, agendamento no Google Calendar e cobrança automática.">
   <meta property="twitter:image" content="https://umbrelladigital.com.br/assets/og-image.png">
 
-  <title>Umbrella — Automação & IA sob medida em Teresina</title>
+  <title>Recepcionista IA, agendamento e cobrança automática no WhatsApp — Umbrella</title>
+
+  <!-- JSON-LD Schema.org Product para o Recepcionista IA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Recepcionista IA no WhatsApp",
+    "image": "https://umbrelladigital.com.br/assets/og-image.png",
+    "description": "Atendente com inteligência artificial 24h para WhatsApp. Responde dúvidas, qualifica leads e realiza agendamentos automáticos.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Umbrella"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://umbrelladigital.com.br/#produtos",
+      "priceCurrency": "BRL",
+      "price": "3500.00",
+      "priceValidUntil": "2027-12-31",
+      "valueAddedTaxIncluded": "true",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,16 +107,19 @@
         <!-- Nav Links desktop -->
         <ul class="nav-links" role="list">
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos</a></li>
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#depoimentos">Cases</a></li>
           <li><a href="#como-funciona">Como funciona</a></li>
           <li><a href="#investimento">Investimento</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
 
         <button class="nav-cta" id="btn-nav-falar"
-          onclick="window.open('https://wa.me/558681129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!', '_blank')"
-          aria-label="Chamar equipe da Umbrella no WhatsApp">
+          onclick="openWhats('Olá! Gostaria de solicitar um orçamento e saber mais sobre as automações da Umbrella.', 'nav-cabecalho')"
+          aria-label="Chamar equipe da Umbrella no WhatsApp"
+          data-product="diagnostico"
+          data-section="header">
           <i class="ti ti-brand-whatsapp"></i> WhatsApp
         </button>
 
@@ -106,15 +134,18 @@
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <ul role="list">
         <li><a href="#inicio" class="mob-link">Início</a></li>
-        <li><a href="#servicos" class="mob-link">Serviços</a></li>
+        <li><a href="#produtos" class="mob-link">Produtos</a></li>
         <li><a href="#sobre" class="mob-link">Sobre</a></li>
+        <li><a href="#depoimentos" class="mob-link">Cases</a></li>
         <li><a href="#como-funciona" class="mob-link">Como funciona</a></li>
         <li><a href="#investimento" class="mob-link">Investimento</a></li>
         <li><a href="#faq" class="mob-link">FAQ</a></li>
         <li><a href="#contato" class="mob-link">Contato</a></li>
       </ul>
       <button class="btn-primary mob-cta"
-        onclick="window.open('https://wa.me/558681129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento!', '_blank')">
+        onclick="openWhats('Olá! Gostaria de solicitar um orçamento e saber mais sobre as automações da Umbrella.', 'nav-mobile')"
+        data-product="diagnostico"
+        data-section="header-mobile">
         <i class="ti ti-brand-whatsapp"></i> Chamar no WhatsApp
       </button>
     </div>
@@ -131,18 +162,20 @@
             <span class="hero-badge">
               <i class="ti ti-map-pin" aria-hidden="true"></i> Teresina, PI
             </span>
-            <h1>Sua equipe focada no que importa.<br><span class="gold-text">A rotina repetitiva fica com a
-                gente.</span></h1>
-            <p>Implementamos Inteligência Artificial e automações sob medida para empresas em Teresina. Menos planilha,
-              menos retrabalho — mais tempo pro que gera resultado de verdade.</p>
+            <h1>Seu WhatsApp atendendo, agendando e cobrando — <span class="gold-text">24 horas por dia</span></h1>
+            <p>Automação com IA para clínicas, oficinas e lojas. Teste agora: quem responde este botão é a nossa própria recepcionista IA.</p>
             <div class="hero-btns">
               <button class="btn-primary" id="hero-cta-principal"
-                onclick="window.open('https://wa.me/558681129331?text=Olá!%20Vim%20do%20site%20e%20quero%20conversar%20sobre%20automação%20e%20IA.', '_blank')">
-                <i class="ti ti-brand-whatsapp"></i> Bater um papo no WhatsApp
+                onclick="openWhats('Olá! Vim do site e quero testar a recepcionista IA.', 'hero-ia')"
+                data-product="recepcionista-ia"
+                data-section="hero">
+                <i class="ti ti-brand-whatsapp"></i> Converse com nossa IA agora
               </button>
               <button class="btn-secondary" id="hero-cta-secundario"
-                onclick="document.getElementById('como-funciona').scrollIntoView({behavior:'smooth'})">
-                Ver como funciona <i class="ti ti-arrow-down"></i>
+                onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})"
+                data-product="ver-produtos"
+                data-section="hero">
+                Ver os produtos <i class="ti ti-arrow-down"></i>
               </button>
             </div>
             <div class="hero-trust">
@@ -223,83 +256,84 @@
       </div>
     </section>
 
-    <!-- Stats Bar -->
+    <!-- Trust Bar -->
     <div class="wrap">
-      <div class="stats-bar reveal">
-        <div class="stat">
-          <div class="stat-top">
-            <div class="stat-icon-group">
-              <div class="bar bar-1"></div>
-              <div class="bar bar-2"></div>
-              <div class="bar bar-3"></div>
-            </div>
-            <span class="stat-num">3×</span>
-            <div class="stat-icon-group">
-              <div class="bar bar-1"></div>
-              <div class="bar bar-2"></div>
-              <div class="bar bar-3"></div>
-            </div>
-          </div>
-          <span class="stat-label">mais produtividade na rotina operacional</span>
-        </div>
-        <div class="stat">
-          <div class="stat-top">
-            <div class="stat-icon-group">
-              <div class="bar bar-1"></div>
-              <div class="bar bar-2"></div>
-              <div class="bar bar-3"></div>
-            </div>
-            <span class="stat-num">IA</span>
-            <div class="stat-icon-group">
-              <div class="bar bar-1"></div>
-              <div class="bar bar-2"></div>
-              <div class="bar bar-3"></div>
-            </div>
-          </div>
-          <span class="stat-label">integrada ao jeito que você já trabalha</span>
-        </div>
-        <div class="stat">
-          <div class="stat-top">
-            <span class="stat-num">100%</span>
-          </div>
-          <span class="stat-label">focado em liberar gente, não substituir</span>
-        </div>
+      <div class="trust-band reveal">
+        <!-- TODO: números reais -->
+        <span class="trust-band-item"><i class="ti ti-message-dots" aria-hidden="true"></i> +10.000 mensagens automatizadas</span>
+        <span class="trust-band-item"><i class="ti ti-clock" aria-hidden="true"></i> Atendimento 24/7</span>
+        <span class="trust-band-item"><i class="ti ti-map-pin" aria-hidden="true"></i> Teresina-PI</span>
       </div>
     </div>
 
-    <!-- Serviços -->
-    <section id="servicos" class="reveal">
+    <!-- Produtos -->
+    <section id="produtos" class="reveal">
       <div class="wrap">
         <div class="section-header">
-          <span class="section-label">O que fazemos</span>
-          <h2 class="section-title">Serviços que simplificam sua rotina</h2>
-          <p class="section-sub">Da estratégia à execução: entregamos automações inteligentes e soluções focadas na
-            evolução do seu negócio.</p>
+          <span class="section-label">Nossos produtos</span>
+          <h2 class="section-title">Automação pronta pra ligar e usar</h2>
+          <p class="section-sub">Preço fechado, escopo definido e mensalidade que inclui manutenção. Sem orçamento surpresa.</p>
         </div>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="s-icon"><i class="ti ti-brain"></i></div>
-            <h3>Agentes de IA que trabalham por você</h3>
-            <p>Criamos assistentes inteligentes que respondem clientes, analisam dados, geram relatórios e tomam
-              decisões simples — sem você precisar estar por perto.</p>
+        <div class="products-grid">
+          <!-- Card 1: Recepcionista IA (Featured) -->
+          <div class="product-card featured" data-product="recepcionista-ia" data-section="produtos">
+            <span class="product-tag">Mais procurado</span>
+            <div class="s-icon"><i class="ti ti-message-chatbot" aria-hidden="true"></i></div>
+            <span class="product-pain">Perdendo cliente fora do horário?</span>
+            <h3>Recepcionista IA no WhatsApp</h3>
+            <p>Atende 24h, responde dúvidas e entrega o lead pronto no seu WhatsApp.</p>
+            <div class="product-price">Setup a partir de R$ 3.500 + R$ 300/mês</div>
+            <a href="produtos/recepcionista-ia.html" class="btn-primary">
+              Conhecer produto <i class="ti ti-arrow-right"></i>
+            </a>
           </div>
-          <div class="service-card">
-            <div class="s-icon"><i class="ti ti-robot"></i></div>
-            <h3>Automação de processos repetitivos</h3>
-            <p>Transferências de dados, emissão de documentos, lançamentos em sistemas, follow-ups automáticos. Tudo que
-              consome tempo sem gerar valor, a gente automatiza.</p>
+
+          <!-- Card 2: Agendamento -->
+          <div class="product-card" data-product="agendamento" data-section="produtos">
+            <div class="s-icon"><i class="ti ti-calendar-check" aria-hidden="true"></i></div>
+            <span class="product-pain">Sua agenda vive em ping-pong de mensagens?</span>
+            <h3>Agente de Agendamento</h3>
+            <p>Marca, remarca e confirma consultas direto no seu Google Calendar.</p>
+            <div class="product-price">Sob consulta · upsell</div>
+            <a href="produtos/agendamento.html" class="btn-secondary">
+              Conhecer produto <i class="ti ti-arrow-right"></i>
+            </a>
           </div>
-          <div class="service-card">
-            <div class="s-icon"><i class="ti ti-plug-connected"></i></div>
-            <h3>Integrações entre sistemas</h3>
-            <p>Seu CRM não conversa com seu ERP? Seu WhatsApp não alimenta sua planilha? A gente conecta os pontos — sem
-              precisar trocar nenhum sistema que você já usa.</p>
+
+          <!-- Card 3: Cobrança -->
+          <div class="product-card" data-product="cobranca" data-section="produtos">
+            <div class="s-icon"><i class="ti ti-cash" aria-hidden="true"></i></div>
+            <span class="product-pain">Quanto você tem pra receber e ninguém cobra?</span>
+            <h3>Cobrança Automática</h3>
+            <p>Lembretes automáticos com Pix pronto. Se paga no primeiro mês.</p>
+            <div class="product-price">Calcule seu ROI ↓</div>
+            <a href="produtos/cobranca.html" class="btn-secondary">
+              Conhecer produto <i class="ti ti-arrow-right"></i>
+            </a>
           </div>
-          <div class="service-card">
-            <div class="s-icon"><i class="ti ti-chart-dots"></i></div>
-            <h3>Dashboards e visibilidade de dados</h3>
-            <p>Transformamos dados espalhados em visões claras e acionáveis. Indicadores de vendas, operação, finanças —
-              tudo num painel que você acessa do celular.</p>
+
+          <!-- Card 4: Painel do Dono -->
+          <div class="product-card" data-product="painel-dono" data-section="produtos">
+            <div class="s-icon"><i class="ti ti-report-analytics" aria-hidden="true"></i></div>
+            <span class="product-pain">Você sabe como foi a semana do seu negócio?</span>
+            <h3>Painel do Dono</h3>
+            <p>Relatório automático toda segunda, direto no seu WhatsApp.</p>
+            <div class="product-price">Assinatura mensal, sem setup</div>
+            <a href="produtos/painel-do-dono.html" class="btn-secondary">
+              Conhecer produto <i class="ti ti-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Card 5: Site + Bot -->
+          <div class="product-card" data-product="site-bot" data-section="produtos">
+            <div class="s-icon"><i class="ti ti-world-www" aria-hidden="true"></i></div>
+            <span class="product-pain">Ainda sem site profissional?</span>
+            <h3>Combo Site + Bot</h3>
+            <p>Site pronto + atendente IA num pacote só. Este site é a amostra.</p>
+            <div class="product-price">Pacote de entrada</div>
+            <a href="produtos/site-e-bot.html" class="btn-secondary">
+              Conhecer produto <i class="ti ti-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -387,37 +421,26 @@
         <div class="section-header">
           <span class="section-label">Como funciona</span>
           <h2 class="section-title">Do papo inicial à automação rodando</h2>
-          <p class="section-sub">Sem burocracia. Processo claro, etapas definidas e você sempre sabendo o que acontece.
-          </p>
+          <p class="section-sub">Sem burocracia. Processo claro, etapas definidas e você sempre sabendo o que acontece.</p>
         </div>
         <div class="how-grid">
           <div class="how-step">
             <span class="how-step-num">01</span>
-            <div class="how-icon"><i class="ti ti-messages"></i></div>
-            <h4>Diagnóstico gratuito</h4>
-            <p>Conversamos sobre sua operação. Identificamos os gargalos, os processos mais lentos e onde a automação
-              traz retorno mais rápido.</p>
+            <div class="how-icon"><i class="ti ti-messages" aria-hidden="true"></i></div>
+            <h4>Diagnóstico gratuito no WhatsApp</h4>
+            <p>Conversamos sobre sua operação. Mapeamos os gargalos e mostramos onde a IA trará retorno financeiro real.</p>
           </div>
           <div class="how-step">
             <span class="how-step-num">02</span>
-            <div class="how-icon"><i class="ti ti-list-check"></i></div>
-            <h4>Proposta sob medida</h4>
-            <p>Apresentamos um plano claro: o que será automatizado, como, em quanto tempo e com qual investimento. Sem
-              surpresas no caminho.</p>
+            <div class="how-icon"><i class="ti ti-rocket" aria-hidden="true"></i></div>
+            <h4>Ativação em dias, não meses</h4>
+            <p>Nossos produtos são modulares e prontos. Configuramos, integramos e ativamos tudo na sua empresa em menos de uma semana.</p>
           </div>
           <div class="how-step">
             <span class="how-step-num">03</span>
-            <div class="how-icon"><i class="ti ti-code"></i></div>
-            <h4>Desenvolvimento e testes</h4>
-            <p>Construímos a solução e testamos junto com você em ambiente seguro antes de colocar em produção. Sua
-              operação não para.</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step-num">04</span>
-            <div class="how-icon"><i class="ti ti-rocket"></i></div>
-            <h4>Entrega + suporte</h4>
-            <p>A automação vai ao ar. Treinamos sua equipe e ficamos 30 dias ao lado para garantir que tudo funcione
-              perfeitamente.</p>
+            <div class="how-icon"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+            <h4>Acompanhamento mensal incluso</h4>
+            <p>Garantimos o funcionamento pleno com monitoramento, ajustes periódicos de IA e suporte dedicado para sua equipe.</p>
           </div>
         </div>
       </div>
@@ -465,70 +488,128 @@
         <div class="testimonials-cta">
           <p>Quer ser um dos nossos primeiros casos de sucesso?</p>
           <button class="btn-primary"
-            onclick="window.open('https://wa.me/558681129331?text=Olá!%20Quero%20ser%20um%20dos%20primeiros%20clientes%20da%20Umbrella.', '_blank')">
+            onclick="openWhats('Olá! Quero ser um dos primeiros clientes e caso de sucesso da Umbrella.', 'cases-cta')"
+            data-product="diagnostico"
+            data-section="depoimentos">
             <i class="ti ti-brand-whatsapp"></i> Quero ser o primeiro
           </button>
         </div>
       </div>
     </section>
 
+    <!-- Faixa: Este site é o produto -->
+    <div class="site-product-strip reveal" data-product="site-bot" data-section="faixa-site-produto">
+      <div class="wrap">
+        <div class="strip-content">
+          <span>Gostou deste site? Ele foi feito com o mesmo template que entregamos no <strong>Combo Site + Bot</strong>.</span>
+          <button class="btn-primary" onclick="openWhats('Olá! Gostaria de um site igual a este com atendente IA.', 'faixa-site-bot')">
+            Quero um igual <i class="ti ti-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Investimento -->
     <section id="investimento" class="reveal">
       <div class="wrap">
         <div class="section-header">
           <span class="section-label">Investimento</span>
-          <h2 class="section-title">Invista no tamanho certo pro seu momento</h2>
-          <p class="section-sub">Sem pacote engessado. A gente adapta ao que faz sentido pra sua empresa agora.</p>
+          <h2 class="section-title">Escada de crescimento</h2>
+          <p class="section-sub">Escolha o degrau certo para o momento da sua empresa e evolua conforme a demanda cresce.</p>
         </div>
         <div class="pricing-grid">
-          <div class="price-card">
-            <h3>Diagnóstico Rápido</h3>
-            <p class="desc">Quer saber onde sua operação tá travando? A gente mapeia os gargalos e entrega um plano de
-              ação claro — sem compromisso de longo prazo.</p>
+          <!-- Card A -->
+          <div class="price-card" data-product="combo-site-bot" data-section="investimento">
+            <h3>Comece pequeno</h3>
+            <p class="desc">Combo Site + Bot — A sua vitrine online automatizada para captar e qualificar clientes 24/7.</p>
             <div class="price">Sob consulta</div>
             <ul class="price-features">
-              <li>Mapeamento de gargalos</li>
-              <li>Desenho de fluxos otimizados</li>
-              <li>Recomendação de ferramentas</li>
-              <li>Reunião de entrega e alinhamento</li>
+              <li>Site profissional e moderno</li>
+              <li>Atendente IA Lite integrada</li>
+              <li>Hospedagem e domínio inclusos</li>
+              <li>Pronto para rodar em poucos dias</li>
             </ul>
             <button class="btn-secondary"
-              onclick="window.open('https://wa.me/558681129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Diagnóstico%20Rápido.', '_blank')">
-              Quero um diagnóstico
+              onclick="openWhats('Olá! Gostaria de saber mais sobre o Combo Site + Bot de entrada.', 'investimento-site-bot')">
+              Quero meu Combo
             </button>
           </div>
-          <div class="price-card featured">
-            <h3>Projeto sob medida</h3>
-            <p class="desc">Do zero à automação rodando: desenhamos, desenvolvemos e entregamos a solução completa. Com
-              treinamento da equipe e 30 dias de suporte inclusos.</p>
-            <div class="price">Sob consulta</div>
+          <!-- Card B (Featured) -->
+          <div class="price-card featured" data-product="recepcionista-ia-agendamento" data-section="investimento">
+            <h3>Automatize o atendimento</h3>
+            <p class="desc">Recepcionista IA + opção Agendamento — Atendimento completo com agenda integrada para seu negócio.</p>
+            <div class="price">R$ 3.500<span> setup inicial</span></div>
             <ul class="price-features">
-              <li>Escopo fechado personalizado</li>
-              <li>Desenvolvimento completo dos robôs</li>
-              <li>Homologação em ambiente de teste</li>
-              <li>Treinamento operacional detalhado</li>
-              <li>30 dias de garantia e suporte</li>
+              <li>Atendimento automático 24h no WhatsApp</li>
+              <li>Qualificação de leads qualificados</li>
+              <li>Agenda integrada (Google Calendar)</li>
+              <li>Handoff inteligente para humanos</li>
             </ul>
             <button class="btn-primary"
-              onclick="window.open('https://wa.me/558681129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%20sob%20medida%20de%20automação.', '_blank')">
-              Começar meu projeto
+              onclick="openWhats('Olá! Quero saber mais sobre a Recepcionista IA no WhatsApp com agendamento.', 'investimento-recepcionista')">
+              Começar automação
             </button>
           </div>
-          <div class="price-card">
-            <h3>Parceiro de tecnologia</h3>
-            <p class="desc">Suporte técnico, monitoramento e melhorias contínuas. Como ter uma equipe de tecnologia sem
-              precisar contratar.</p>
-            <div class="price">Sob consulta<span> / mês</span></div>
+          <!-- Card C -->
+          <div class="price-card" data-product="painel-dono-cobranca" data-section="investimento">
+            <h3>Opere no piloto automático</h3>
+            <p class="desc">Painel do Dono + Cobrança — Gestão financeira e relatórios automáticos direto no seu WhatsApp.</p>
+            <div class="price">Sob consulta</div>
             <ul class="price-features">
-              <li>Horas exclusivas de desenvolvimento</li>
-              <li>Monitoramento de erros e quedas</li>
-              <li>Atualizações e melhorias contínuas</li>
-              <li>Relatório mensal de performance</li>
+              <li>Relatório semanal no seu WhatsApp</li>
+              <li>Cobrança automática com Pix pronto</li>
+              <li>Réguas personalizadas de cobrança</li>
+              <li>Retorno sobre o investimento (ROI) mensal</li>
             </ul>
             <button class="btn-secondary"
-              onclick="window.open('https://wa.me/558681129331?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20Parceiro%20de%20Tecnologia%20mensal.', '_blank')">
-              Quero um parceiro fixo
+              onclick="openWhats('Olá! Quero saber mais sobre o Painel do Dono + Cobrança Automática.', 'investimento-painel-cobranca')">
+              Falar com especialista
             </button>
+          </div>
+        </div>
+        <div class="maintenance-note reveal">
+          <p><i class="ti ti-info-circle" aria-hidden="true"></i> <strong>Nota sobre mensalidade:</strong> Todo produto inclui plano de manutenção: <strong>Essencial</strong> (monitoramento + correções, R$ 300/mês) ou <strong>Evolução</strong> (+ ajustes de IA e melhorias, R$ 500–800/mês).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculadora de ROI -->
+    <section id="roi" class="reveal">
+      <div class="wrap">
+        <div class="roi-container">
+          <div class="contact-form-card roi-card" data-product="cobranca-ia" data-section="calculadora-roi">
+            <span class="section-label" style="justify-content: center; margin-bottom: 12px; font-size: 10px; font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.18em; text-transform: uppercase;">Simulação de recuperação</span>
+            <h2 class="section-title" style="text-align: center; font-size: clamp(24px, 3.5vw, 32px); margin-bottom: 12px;">Quanto você deixa de receber por mês?</h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 500px; margin: 0 auto 32px; font-size: 14px;">
+              Descubra o potencial de recuperação financeira da sua empresa com nossa cobrança automatizada.
+            </p>
+            <div class="roi-form-body">
+              <div class="form-group" style="max-width: 400px; margin: 0 auto 24px;">
+                <label for="roi-value" style="text-align: center; display: block; margin-bottom: 8px;">Valor total em atraso (R$)</label>
+                <input type="text" id="roi-value" class="roi-input" placeholder="Ex: 10.000" autocomplete="off" style="text-align: center; font-size: 18px; font-weight: 700; color: var(--accent-gold); border-color: rgba(223, 169, 90, 0.3);">
+              </div>
+              <div id="roi-result-container" class="roi-result" style="display: none; text-align: center; padding: 24px; background: rgba(223, 169, 90, 0.03); border: 1px solid rgba(223, 169, 90, 0.15); border-radius: 12px; margin-bottom: 24px;">
+                <p style="color: var(--text-primary); font-size: 15px; margin-bottom: 10px; line-height: 1.6;">
+                  Com uma taxa média de recuperação de <strong>30% a 50%</strong>, você pode recuperar entre:
+                </p>
+                <div class="roi-values" style="display: flex; justify-content: center; align-items: center; gap: 16px; margin-bottom: 14px; flex-wrap: wrap;">
+                  <span id="roi-min" class="gold-text" style="font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif;">R$ 0</span>
+                  <span style="color: var(--text-muted);">e</span>
+                  <span id="roi-max" class="gold-text" style="font-size: 24px; font-weight: 800; font-family: 'Outfit', sans-serif;">R$ 0</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 0;">
+                  no primeiro mês de ativação.
+                </p>
+              </div>
+              <div style="text-align: center;">
+                <button type="button" class="btn-primary" onclick="enviarRoiWhats()" style="padding: 14px 40px;">
+                  <i class="ti ti-brand-whatsapp"></i> Receber simulação no WhatsApp
+                </button>
+                <p class="roi-disclaimer" style="font-size: 11px; color: var(--text-muted); margin-top: 14px; line-height: 1.5;">
+                  Estimativa baseada em réguas de cobrança automatizadas; resultado varia por segmento e perfil do cliente.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -545,66 +626,47 @@
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Minha empresa precisa ser grande pra valer a pena automatizar?
-              <i class="ti ti-chevron-down faq-chevron"></i>
+              Meu número do WhatsApp pode ser banido?
+              <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
             </button>
             <div class="faq-a">
-              <p>Não. Pequenas e médias empresas são as que mais se beneficiam — porque cada hora economizada tem peso
-                direto na operação. Já ajudamos negócios com 2 pessoas a ganhar o equivalente a um funcionário extra em
-                produtividade.</p>
+              <p>Com o uso responsável e respeitando as diretrizes de envio, o risco é praticamente nulo. Para a Cobrança Automática e integrações de alto volume, nós utilizamos a API oficial do WhatsApp (Meta Cloud API), o que blinda o seu número contra banimentos e garante total segurança operacional.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Preciso trocar os sistemas que já uso?
-              <i class="ti ti-chevron-down faq-chevron"></i>
+              E a LGPD? Meus clientes vão aceitar falar com IA?
+              <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
             </button>
             <div class="faq-a">
-              <p>Quase nunca. Nossa especialidade é conectar e automatizar o que você já tem — seja WhatsApp, planilha,
-                Google, ERP ou qualquer outro sistema. Só recomendamos troca quando realmente faz sentido financeiro.
-              </p>
+              <p>Sim. Todas as nossas automações de IA possuem política de opt-out: se o cliente disser que quer falar com um humano, a IA interrompe o fluxo imediatamente e notifica sua equipe (handoff). Os dados dos clientes são trafegados de forma segura e respeitam as regras da LGPD com servidores seguros.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
               Em quanto tempo fica pronto?
-              <i class="ti ti-chevron-down faq-chevron"></i>
+              <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
             </button>
             <div class="faq-a">
-              <p>Depende da complexidade. Automações simples ficam prontas em 1 a 2 semanas. Projetos maiores, com
-                múltiplas integrações, costumam levar de 4 a 8 semanas. Você sabe o prazo antes de assinar qualquer
-                coisa.</p>
+              <p>Como os nossos produtos já estão prontos e estruturados, o tempo de implantação é extremamente rápido. A ativação padrão (incluindo testes e integrações básicas) é feita em menos de uma semana — normalmente em até 5 dias úteis.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              E se a automação parar de funcionar depois?
-              <i class="ti ti-chevron-down faq-chevron"></i>
+              Posso cancelar a mensalidade?
+              <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
             </button>
             <div class="faq-a">
-              <p>Todo projeto tem 30 dias de garantia inclusos — qualquer problema, a gente resolve sem custo. E temos
-                plano mensal de parceiro para quem quer monitoramento contínuo e melhorias ao longo do tempo.</p>
+              <p>Sim, a mensalidade de manutenção é livre de fidelidade e pode ser cancelada a qualquer momento. Ao cancelar, no entanto, as integrações ativas, o processamento dos robôs de IA e o monitoramento técnico são interrompidos, já que dependem das nossas licenças de servidor ativas.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Vocês trabalham só com empresas de Teresina?
-              <i class="ti ti-chevron-down faq-chevron"></i>
+              Funciona pro meu segmento?
+              <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
             </button>
             <div class="faq-a">
-              <p>Somos de Teresina e adoramos atender localmente. Mas automação é 100% remota por natureza — atendemos
-                empresas de qualquer lugar do Brasil sem problema nenhum.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
-              Qual o investimento mínimo pra começar?
-              <i class="ti ti-chevron-down faq-chevron"></i>
-            </button>
-            <div class="faq-a">
-              <p>Não temos um valor fixo mínimo porque cada projeto é diferente. O diagnóstico inicial é gratuito — nele
-                a gente entende sua necessidade e apresenta uma proposta que faça sentido pro seu momento, seja pequeno
-                ou grande.</p>
+              <p>Nossas soluções funcionam perfeitamente para clínicas (médicas, estéticas, odontológicas), oficinas, lojas, imobiliárias e prestadores de serviços em geral. Se o seu negócio atende no WhatsApp e faz agendamentos ou cobranças, funciona para você. Solicite nosso diagnóstico gratuito para confirmarmos.</p>
             </div>
           </div>
         </div>
@@ -621,10 +683,9 @@
             <h2>Quer saber se automação faz sentido pro seu negócio?</h2>
             <p>Manda uma mensagem sem compromisso. A gente responde rápido e com sinceridade — se automação não for a
               solução, a gente fala também.</p>
-            <a href="https://wa.me/558681129331?text=Olá!%20Quero%20conversar%20sobre%20automação%20para%20minha%20empresa."
-              target="_blank" class="btn-primary whatsapp-btn">
+            <button onclick="openWhats('Olá! Quero conversar sobre automação para minha empresa.', 'contato-whatsapp')" class="btn-primary whatsapp-btn" data-product="diagnostico" data-section="contato">
               <i class="ti ti-brand-whatsapp"></i> Chamar no WhatsApp agora
-            </a>
+            </button>
             <div class="contact-info">
               <div class="contact-chip">
                 <i class="ti ti-mail" style="color:var(--accent-terracotta)"></i>
@@ -690,13 +751,25 @@
     <div class="wrap">
       <div class="footer-layout">
         <div class="footer-left">
-          Comece agora: <a href="https://wa.me/558681129331" target="_blank" class="footer-phone">(86) 8112-9331</a>
+          Comece agora: <a href="#" onclick="openWhats('Olá! Gostaria de conversar com a Umbrella.', 'footer-telefone'); return false;" class="footer-phone">(86) 8112-9331</a>
         </div>
-        <div class="footer-nav">
-          <a href="#servicos">Serviços</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contato">Contato</a>
+        <div class="footer-links-wrap">
+          <div class="footer-nav">
+            <span class="footer-nav-title">Navegação</span>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#depoimentos">Cases</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contato">Contato</a>
+          </div>
+          <div class="footer-nav">
+            <span class="footer-nav-title">Produtos</span>
+            <a href="produtos/recepcionista-ia.html" data-product="recepcionista-ia" data-section="footer">Recepcionista IA</a>
+            <a href="produtos/agendamento.html" data-product="agendamento" data-section="footer">Agente de Agendamento</a>
+            <a href="produtos/cobranca.html" data-product="cobranca" data-section="footer">Cobrança Automática</a>
+            <a href="produtos/painel-do-dono.html" data-product="painel-dono" data-section="footer">Painel do Dono</a>
+            <a href="produtos/site-e-bot.html" data-product="site-bot" data-section="footer">Combo Site + Bot</a>
+          </div>
         </div>
       </div>
       <div class="footer-sub-layout">
@@ -708,8 +781,8 @@
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/558681129331?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20automação!"
-    class="chatbot-float" target="_blank" aria-label="Falar com especialista no WhatsApp">
+  <a href="#" onclick="openWhats('Olá! Gostaria de falar com um especialista sobre automação e IA.', 'chatbot-float'); return false;"
+    class="chatbot-float" aria-label="Falar com especialista no WhatsApp" data-product="diagnostico" data-section="float-btn">
     <div class="chatbot-tooltip">Fale com a gente! 💬</div>
     <div class="chatbot-bubble">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -785,6 +858,97 @@
       });
     });
 
+    // WhatsApp Constant & Global Redirect Function
+    const WHATSAPP_NUMBER = '558681129331';
+    const API_LEADS_URL = '';
+
+    function openWhats(mensagem, origem) {
+      // Capturar parâmetros de rastreamento UTM da URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get('utm_source') || '';
+      const utmMedium = urlParams.get('utm_medium') || '';
+      const utmCampaign = urlParams.get('utm_campaign') || '';
+
+      // Construir URL base do WhatsApp
+      let waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+
+      // Anexar UTMs como parâmetros de log (se existirem)
+      if (utmSource) waUrl += `&utm_source=${encodeURIComponent(utmSource)}`;
+      if (utmMedium) waUrl += `&utm_medium=${encodeURIComponent(utmMedium)}`;
+      if (utmCampaign) waUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
+      if (origem) waUrl += `&origin=${encodeURIComponent(origem)}`;
+
+      // Se API de leads estiver preenchida, dispara em background antes (Fase 3)
+      if (API_LEADS_URL) {
+        const leadData = {
+          nome: document.getElementById('f-nome')?.value || '',
+          telefone: document.getElementById('f-tel')?.value || '',
+          mensagem: mensagem,
+          origem: origem,
+          utm_source: utmSource,
+          utm_medium: utmMedium,
+          utm_campaign: utmCampaign
+        };
+
+        fetch(API_LEADS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadData)
+        })
+        .catch(err => console.warn('Erro ao registrar lead:', err))
+        .finally(() => {
+          window.open(waUrl, '_blank');
+        });
+      } else {
+        window.open(waUrl, '_blank');
+      }
+    }
+
+    // Calculadora de ROI JS Puro
+    const roiInput = document.getElementById('roi-value');
+    if (roiInput) {
+      roiInput.addEventListener('input', function() {
+        let valStr = this.value.replace(/\D/g, '');
+        if (!valStr || valStr === '0') {
+          this.value = '';
+          document.getElementById('roi-result-container').style.display = 'none';
+          return;
+        }
+
+        const valor = parseInt(valStr, 10);
+        this.value = valor.toLocaleString('pt-BR');
+
+        const minRec = valor * 0.3;
+        const maxRec = valor * 0.5;
+
+        const fmtMin = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(minRec);
+        const fmtMax = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(maxRec);
+
+        document.getElementById('roi-min').textContent = fmtMin;
+        document.getElementById('roi-max').textContent = fmtMax;
+        document.getElementById('roi-result-container').style.display = 'block';
+      });
+    }
+
+    function enviarRoiWhats() {
+      const roiVal = document.getElementById('roi-value');
+      if (!roiVal) return;
+      const valStr = roiVal.value.replace(/\D/g, '');
+      if (!valStr) return;
+
+      const valor = parseInt(valStr, 10);
+      const minRec = valor * 0.3;
+      const maxRec = valor * 0.5;
+
+      const fmtVal = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(valor);
+      const fmtMin = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(minRec);
+      const fmtMax = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(maxRec);
+
+      const msg = `Olá! Fiz a simulação de cobrança no site.\n\n*Valor total em atraso:* ${fmtVal}\n*Recuperação estimada (30-50%):* entre ${fmtMin} e ${fmtMax} no primeiro mês.\n\nGostaria de receber uma simulação detalhada para o meu segmento.`;
+      
+      openWhats(msg, 'calculadora-roi');
+    }
+
     // Formulário — abre WhatsApp com os dados
     document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
@@ -795,25 +959,22 @@
       const msg = document.getElementById('f-msg').value.trim();
 
       if (!nome || !email || !msg) {
-        // Validação simples
         if (!nome) document.getElementById('f-nome').style.borderColor = 'var(--accent-terracotta)';
         if (!email) document.getElementById('f-email').style.borderColor = 'var(--accent-terracotta)';
         if (!msg) document.getElementById('f-msg').style.borderColor = 'var(--accent-terracotta)';
         return;
       }
 
-      // Montar mensagem WhatsApp
       let waMsg = `Olá! Vim do formulário do site.\n\n*Nome:* ${nome}`;
       if (empresa) waMsg += `\n*Empresa:* ${empresa}`;
       waMsg += `\n*E-mail:* ${email}`;
       if (tel) waMsg += `\n*WhatsApp:* ${tel}`;
       waMsg += `\n\n*Mensagem:* ${msg}`;
 
-      // Mostrar sucesso e abrir WA
       document.getElementById('contact-form').style.display = 'none';
       document.getElementById('form-success').style.display = 'flex';
       setTimeout(() => {
-        window.open('https://wa.me/558681129331?text=' + encodeURIComponent(waMsg), '_blank');
+        openWhats(waMsg, 'formulario-contato');
       }, 800);
     });
 

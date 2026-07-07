@@ -1327,3 +1327,312 @@ footer { padding: 56px 0; border-top: 1px solid var(--border-color); background:
   .nav-links a { min-height: 44px; display: flex; align-items: center; }
   .footer-nav a { min-height: 44px; display: flex; align-items: center; }
 }
+
+/* ==========================================================================
+   NOVAS CLASSES - REESTRUTURAÇÃO (CATÁLOGO DE PRODUTOS & ROI)
+   ========================================================================== */
+
+/* Barra de Confiança pós-hero */
+.trust-band {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--bg-card-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sharp);
+  padding: 20px 24px;
+  margin: 24px auto 64px;
+  gap: 20px;
+  flex-wrap: wrap;
+  backdrop-filter: blur(12px);
+  max-width: 1100px;
+}
+.trust-band-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.trust-band-item i {
+  color: var(--accent-gold);
+  font-size: 16px;
+}
+
+/* Vitrine de Produtos */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-organic);
+  padding: 40px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-spring);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.product-card:hover {
+  border-color: var(--accent-gold);
+  background: var(--bg-card-hover);
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 60px rgba(223, 169, 90, 0.07);
+}
+.product-card h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+.product-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+.product-pain {
+  font-size: 11px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+.product-price {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+.product-card .btn-primary,
+.product-card .btn-secondary {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 13px;
+}
+
+/* Modificador Featured pro Recepcionista */
+.product-card.featured {
+  border-color: var(--accent-gold);
+  background: linear-gradient(180deg, var(--bg-card) 0%, rgba(223, 169, 90, 0.04) 100%);
+  box-shadow: 0 10px 30px rgba(223, 169, 90, 0.05);
+}
+.product-card.featured:hover {
+  box-shadow: 0 15px 40px rgba(223, 169, 90, 0.12);
+}
+.product-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 9px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--accent-gold);
+  color: #090908;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* Notas de Manutenção (Pricing) */
+.maintenance-note {
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: var(--bg-card-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sharp);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.maintenance-note p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+.maintenance-note strong {
+  color: var(--text-primary);
+}
+.maintenance-note i {
+  color: var(--accent-gold);
+  margin-right: 6px;
+}
+
+/* Faixa "Este site é o produto" */
+.site-product-strip {
+  background: var(--accent-gold-glow);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 0;
+  margin: 48px 0;
+}
+.strip-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.strip-content span {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+.strip-content span strong {
+  color: var(--accent-gold);
+}
+.strip-content .btn-primary {
+  padding: 10px 24px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* Calculadora de ROI */
+.roi-container {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.roi-card {
+  padding: 48px 32px;
+}
+.roi-input {
+  background: rgba(9, 9, 8, 0.8) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 14px 20px !important;
+  color: var(--accent-gold) !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  outline: none !important;
+  transition: border-color 0.2s !important;
+  width: 100% !important;
+}
+.roi-input:focus {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 0 10px rgba(223, 169, 90, 0.15) !important;
+}
+.roi-result {
+  background: rgba(223, 169, 90, 0.02) !important;
+  border: 1px solid rgba(223, 169, 90, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  margin-bottom: 24px !important;
+  animation: fadeIn 0.4s ease-out;
+}
+.roi-values {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 12px 0;
+}
+.roi-values span {
+  line-height: 1.1;
+}
+.roi-disclaimer {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+/* Footer layout updates */
+.footer-links-wrap {
+  display: flex;
+  gap: 48px;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-nav-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  .trust-band {
+    margin: 20px auto 48px;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 32px auto 0;
+    gap: 20px;
+  }
+  .product-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-band {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .strip-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .strip-content .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer-links-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+  }
+  .footer-nav {
+    align-items: center;
+    text-align: center;
+  }
+  .roi-card {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .roi-input {
+    font-size: 16px !important;
+    padding: 10px 14px !important;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
