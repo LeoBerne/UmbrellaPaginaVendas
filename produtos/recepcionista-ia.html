@@ -58,7 +58,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 </head>
 
 <body>
@@ -270,13 +270,13 @@
           <div class="price-card featured" data-product="recepcionista-ia" data-section="lp-preco">
             <h3>Recepcionista IA WhatsApp</h3>
             <p class="desc">A solução completa de atendimento automático rodando 24 horas por dia com inteligência artificial.</p>
-            <div class="price">R$ 3.500<span> setup inicial</span></div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Configuração de respostas com dados do seu negócio</li>
               <li>Treinamento personalizado de IA</li>
               <li>Handoff inteligente para suporte humano</li>
               <li>Conexão segura com API oficial Cloud API</li>
-              <li>Plano de manutenção Essentials de R$ 300/mês</li>
+              <li class="manutencao-item">Plano de manutenção...</li>
             </ul>
             <button class="btn-primary"
               onclick="openWhats('Olá! Desejo contratar a Recepcionista IA no WhatsApp.', 'recepcionista-lp-contratar')">
@@ -402,6 +402,26 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
 
+  <script src="../assets/catalogo.js"></script>
+  <script>
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
     // Hambúrguer menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -438,11 +458,16 @@
       });
     });
 
-    // WhatsApp Constant & Global Redirect Function
-    const WHATSAPP_NUMBER = '558681129331';
     const API_LEADS_URL = '';
 
-    function openWhats(mensagem, origem) {
+    // Unified WhatsApp redirect function
+    function openWhats(mensagemOuId, origem) {
+      let mensagem = mensagemOuId;
+      const prod = getProduto(mensagemOuId);
+      if (prod) {
+        mensagem = prod.mensagem_cta;
+      }
+
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get('utm_source') || '';
       const utmMedium = urlParams.get('utm_medium') || '';
@@ -479,6 +504,20 @@
         window.open(waUrl, '_blank');
       }
     }
+
+    // Dynamic rendering from catalog
+    document.addEventListener('DOMContentLoaded', () => {
+      const priceDiv = document.querySelector('.price-card[data-product="recepcionista-ia"] .price');
+      const prod = typeof getProduto !== 'undefined' ? getProduto('recepcionista-ia') : null;
+      if (priceDiv && prod) {
+        priceDiv.innerHTML = `R$ ${prod.setup_min.toLocaleString('pt-BR')}<span> setup + R$ ${prod.mensalidade_min}/mês</span>`;
+      }
+      
+      const maintItem = document.querySelector('.manutencao-item');
+      if (maintItem && typeof PLANOS_MANUTENCAO !== 'undefined') {
+        maintItem.innerHTML = `Plano de manutenção Essencial de R$ ${PLANOS_MANUTENCAO.essencial.mensal}/mês`;
+      }
+    });
   </script>
 </body>
 

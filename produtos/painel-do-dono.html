@@ -33,7 +33,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 </head>
 
 <body>
@@ -231,7 +231,7 @@
           <div class="price-card featured" data-product="painel-dono" data-section="lp-preco">
             <h3>Assinatura Painel do Dono</h3>
             <p class="desc">A forma mais rápida de receber insights operacionais diretamente no seu celular semanalmente.</p>
-            <div class="price">R$ 150<span> / mês (sem setup)</span></div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Envio de relatórios toda segunda-feira</li>
               <li>Análise automatizada de IA com insights</li>
@@ -363,6 +363,26 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
 
+  <script src="../assets/catalogo.js"></script>
+  <script>
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
     // Hambúrguer menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -399,11 +419,16 @@
       });
     });
 
-    // WhatsApp Constant & Global Redirect Function
-    const WHATSAPP_NUMBER = '558681129331';
     const API_LEADS_URL = '';
 
-    function openWhats(mensagem, origem) {
+    // Unified WhatsApp redirect function
+    function openWhats(mensagemOuId, origem) {
+      let mensagem = mensagemOuId;
+      const prod = getProduto(mensagemOuId);
+      if (prod) {
+        mensagem = prod.mensagem_cta;
+      }
+
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get('utm_source') || '';
       const utmMedium = urlParams.get('utm_medium') || '';
@@ -440,6 +465,15 @@
         window.open(waUrl, '_blank');
       }
     }
+
+    // Dynamic rendering from catalog
+    document.addEventListener('DOMContentLoaded', () => {
+      const priceDiv = document.querySelector('.price-card[data-product="painel-dono"] .price');
+      const prod = typeof getProduto !== 'undefined' ? getProduto('painel-dono') : null;
+      if (priceDiv && prod) {
+        priceDiv.innerHTML = `${prod.preco_display} (sem setup)`;
+      }
+    });
   </script>
 </body>
 

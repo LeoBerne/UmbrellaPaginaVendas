@@ -1596,6 +1596,20 @@ footer { padding: 56px 0; border-top: 1px solid var(--border-color); background:
 }
 
 @media (max-width: 768px) {
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
   .trust-band {
     flex-direction: column;
     align-items: center;

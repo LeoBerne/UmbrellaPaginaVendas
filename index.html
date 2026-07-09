@@ -52,13 +52,52 @@
   }
   </script>
 
+  <!-- JSON-LD ProfessionalService for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Umbrella Expert TI",
+    "image": "https://umbrelladigital.com.br/assets/og-image.png",
+    "@id": "https://umbrelladigital.com.br",
+    "url": "https://umbrelladigital.com.br",
+    "telephone": "+558681129331",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Teresina, PI",
+      "addressLocality": "Teresina",
+      "addressRegion": "PI",
+      "postalCode": "64000-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-5.0919",
+      "longitude": "-42.8034"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 </head>
 
 <body>
@@ -274,67 +313,8 @@
           <h2 class="section-title">Automação pronta pra ligar e usar</h2>
           <p class="section-sub">Preço fechado, escopo definido e mensalidade que inclui manutenção. Sem orçamento surpresa.</p>
         </div>
-        <div class="products-grid">
-          <!-- Card 1: Recepcionista IA (Featured) -->
-          <div class="product-card featured" data-product="recepcionista-ia" data-section="produtos">
-            <span class="product-tag">Mais procurado</span>
-            <div class="s-icon"><i class="ti ti-message-chatbot" aria-hidden="true"></i></div>
-            <span class="product-pain">Perdendo cliente fora do horário?</span>
-            <h3>Recepcionista IA no WhatsApp</h3>
-            <p>Atende 24h, responde dúvidas e entrega o lead pronto no seu WhatsApp.</p>
-            <div class="product-price">Setup a partir de R$ 3.500 + R$ 300/mês</div>
-            <a href="produtos/recepcionista-ia.html" class="btn-primary">
-              Conhecer produto <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Card 2: Agendamento -->
-          <div class="product-card" data-product="agendamento" data-section="produtos">
-            <div class="s-icon"><i class="ti ti-calendar-check" aria-hidden="true"></i></div>
-            <span class="product-pain">Sua agenda vive em ping-pong de mensagens?</span>
-            <h3>Agente de Agendamento</h3>
-            <p>Marca, remarca e confirma consultas direto no seu Google Calendar.</p>
-            <div class="product-price">Sob consulta · upsell</div>
-            <a href="produtos/agendamento.html" class="btn-secondary">
-              Conhecer produto <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Card 3: Cobrança -->
-          <div class="product-card" data-product="cobranca" data-section="produtos">
-            <div class="s-icon"><i class="ti ti-cash" aria-hidden="true"></i></div>
-            <span class="product-pain">Quanto você tem pra receber e ninguém cobra?</span>
-            <h3>Cobrança Automática</h3>
-            <p>Lembretes automáticos com Pix pronto. Se paga no primeiro mês.</p>
-            <div class="product-price">Calcule seu ROI ↓</div>
-            <a href="produtos/cobranca.html" class="btn-secondary">
-              Conhecer produto <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Card 4: Painel do Dono -->
-          <div class="product-card" data-product="painel-dono" data-section="produtos">
-            <div class="s-icon"><i class="ti ti-report-analytics" aria-hidden="true"></i></div>
-            <span class="product-pain">Você sabe como foi a semana do seu negócio?</span>
-            <h3>Painel do Dono</h3>
-            <p>Relatório automático toda segunda, direto no seu WhatsApp.</p>
-            <div class="product-price">Assinatura mensal, sem setup</div>
-            <a href="produtos/painel-do-dono.html" class="btn-secondary">
-              Conhecer produto <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Card 5: Site + Bot -->
-          <div class="product-card" data-product="site-bot" data-section="produtos">
-            <div class="s-icon"><i class="ti ti-world-www" aria-hidden="true"></i></div>
-            <span class="product-pain">Ainda sem site profissional?</span>
-            <h3>Combo Site + Bot</h3>
-            <p>Site pronto + atendente IA num pacote só. Este site é a amostra.</p>
-            <div class="product-price">Pacote de entrada</div>
-            <a href="produtos/site-e-bot.html" class="btn-secondary">
-              Conhecer produto <i class="ti ti-arrow-right"></i>
-            </a>
-          </div>
+        <div class="products-grid" id="products-grid-container">
+          <!-- Os cards dos produtos são injetados dinamicamente a partir de catalogo.js para garantir consistência única de preços -->
         </div>
       </div>
     </section>
@@ -522,7 +502,7 @@
           <div class="price-card" data-product="combo-site-bot" data-section="investimento">
             <h3>Comece pequeno</h3>
             <p class="desc">Combo Site + Bot — A sua vitrine online automatizada para captar e qualificar clientes 24/7.</p>
-            <div class="price">Sob consulta</div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Site profissional e moderno</li>
               <li>Atendente IA Lite integrada</li>
@@ -538,7 +518,7 @@
           <div class="price-card featured" data-product="recepcionista-ia-agendamento" data-section="investimento">
             <h3>Automatize o atendimento</h3>
             <p class="desc">Recepcionista IA + opção Agendamento — Atendimento completo com agenda integrada para seu negócio.</p>
-            <div class="price">R$ 3.500<span> setup inicial</span></div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Atendimento automático 24h no WhatsApp</li>
               <li>Qualificação de leads qualificados</li>
@@ -554,7 +534,7 @@
           <div class="price-card" data-product="painel-dono-cobranca" data-section="investimento">
             <h3>Opere no piloto automático</h3>
             <p class="desc">Painel do Dono + Cobrança — Gestão financeira e relatórios automáticos direto no seu WhatsApp.</p>
-            <div class="price">Sob consulta</div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Relatório semanal no seu WhatsApp</li>
               <li>Cobrança automática com Pix pronto</li>
@@ -568,7 +548,7 @@
           </div>
         </div>
         <div class="maintenance-note reveal">
-          <p><i class="ti ti-info-circle" aria-hidden="true"></i> <strong>Nota sobre mensalidade:</strong> Todo produto inclui plano de manutenção: <strong>Essencial</strong> (monitoramento + correções, R$ 300/mês) ou <strong>Evolução</strong> (+ ajustes de IA e melhorias, R$ 500–800/mês).</p>
+          <p>Carregando nota sobre mensalidade...</p>
         </div>
       </div>
     </section>
@@ -751,7 +731,7 @@
     <div class="wrap">
       <div class="footer-layout">
         <div class="footer-left">
-          Comece agora: <a href="#" onclick="openWhats('Olá! Gostaria de conversar com a Umbrella.', 'footer-telefone'); return false;" class="footer-phone">(86) 8112-9331</a>
+          Comece agora: <a href="#" onclick="openWhats('Olá! Gostaria de conversar com a Umbrella.', 'footer-telefone'); return false;" class="footer-phone">Carregando...</a>
         </div>
         <div class="footer-links-wrap">
           <div class="footer-nav">
@@ -801,6 +781,7 @@
     </div>
   </a>
 
+  <script src="assets/catalogo.js"></script>
   <script>
     // Header scroll
     window.addEventListener('scroll', () => {
@@ -858,11 +839,16 @@
       });
     });
 
-    // WhatsApp Constant & Global Redirect Function
-    const WHATSAPP_NUMBER = '558681129331';
     const API_LEADS_URL = '';
 
-    function openWhats(mensagem, origem) {
+    // Unified WhatsApp redirect function
+    function openWhats(mensagemOuId, origem) {
+      let mensagem = mensagemOuId;
+      const prod = getProduto(mensagemOuId);
+      if (prod) {
+        mensagem = prod.mensagem_cta;
+      }
+
       // Capturar parâmetros de rastreamento UTM da URL
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get('utm_source') || '';
@@ -878,7 +864,7 @@
       if (utmCampaign) waUrl += `&utm_campaign=${encodeURIComponent(utmCampaign)}`;
       if (origem) waUrl += `&origin=${encodeURIComponent(origem)}`;
 
-      // Se API de leads estiver preenchida, dispara em background antes (Fase 3)
+      // Se API de leads estiver preenchida, dispara em background antes
       if (API_LEADS_URL) {
         const leadData = {
           nome: document.getElementById('f-nome')?.value || '',
@@ -903,6 +889,95 @@
         window.open(waUrl, '_blank');
       }
     }
+
+    // Dynamic rendering from catalog
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Vitrine de Produtos
+      const productsGrid = document.getElementById('products-grid-container');
+      if (productsGrid && typeof CATALOGO_PRODUTOS !== 'undefined') {
+        const icons = {
+          'site-bot': 'ti-world-www',
+          'recepcionista-ia': 'ti-message-chatbot',
+          'agendamento': 'ti-calendar-check',
+          'painel-dono': 'ti-report-analytics',
+          'cobranca': 'ti-cash'
+        };
+        
+        const pains = {
+          'site-bot': 'Ainda sem site profissional?',
+          'recepcionista-ia': 'Perdendo cliente fora do horário?',
+          'agendamento': 'Sua agenda vive em ping-pong de mensagens?',
+          'painel-dono': 'Você sabe como foi a semana do seu negócio?',
+          'cobranca': 'Quanto você tem pra receber e ninguém cobra?'
+        };
+
+        const urls = {
+          'site-bot': 'produtos/site-e-bot.html',
+          'recepcionista-ia': 'produtos/recepcionista-ia.html',
+          'agendamento': 'produtos/agendamento.html',
+          'painel-dono': 'produtos/painel-do-dono.html',
+          'cobranca': 'produtos/cobranca.html'
+        };
+
+        productsGrid.innerHTML = CATALOGO_PRODUTOS.map(p => {
+          const isFeatured = p.id === 'recepcionista-ia';
+          const cardClass = isFeatured ? 'product-card featured' : 'product-card';
+          const tagHtml = isFeatured ? '<span class="product-tag">Mais procurado</span>' : '';
+          const btnClass = isFeatured ? 'btn-primary' : 'btn-secondary';
+          const icon = icons[p.id] || 'ti-message-dots';
+          const pain = pains[p.id] || 'Quer melhorar seus processos?';
+          const url = urls[p.id] || '#';
+
+          return `
+            <div class="${cardClass}" data-product="${p.id}" data-section="produtos">
+              ${tagHtml}
+              <div class="s-icon"><i class="ti ${icon}" aria-hidden="true"></i></div>
+              <span class="product-pain">${pain}</span>
+              <h3>${p.nome}</h3>
+              <p>${p.tagline}</p>
+              <div class="product-price">${p.preco_display}</div>
+              <a href="${url}" class="${btnClass}">
+                Conhecer produto <i class="ti ti-arrow-right"></i>
+              </a>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Preços na Escada de Investimento
+      const cardA = document.querySelector('.price-card[data-product="combo-site-bot"] .price');
+      const cardB = document.querySelector('.price-card[data-product="recepcionista-ia-agendamento"] .price');
+      const cardC = document.querySelector('.price-card[data-product="painel-dono-cobranca"] .price');
+      
+      const pSiteBot = typeof getProduto !== 'undefined' ? getProduto('site-bot') : null;
+      const pRecep = typeof getProduto !== 'undefined' ? getProduto('recepcionista-ia') : null;
+      const pCobranca = typeof getProduto !== 'undefined' ? getProduto('cobranca') : null;
+      
+      if (cardA && pSiteBot) {
+        cardA.innerHTML = `R$ ${pSiteBot.setup_min.toLocaleString('pt-BR')}<span> setup + R$ ${pSiteBot.mensalidade_min}/mês</span>`;
+      }
+      if (cardB && pRecep) {
+        cardB.innerHTML = `R$ ${pRecep.setup_min.toLocaleString('pt-BR')}<span> setup + R$ ${pRecep.mensalidade_min}/mês</span>`;
+      }
+      if (cardC && pCobranca) {
+        cardC.innerHTML = `R$ ${pCobranca.setup_min.toLocaleString('pt-BR')}<span> setup + R$ ${pCobranca.mensalidade_min}/mês</span>`;
+      }
+
+      // 3. Nota sobre Mensalidade
+      const maintPara = document.querySelector('.maintenance-note p');
+      if (maintPara && typeof PLANOS_MANUTENCAO !== 'undefined') {
+        maintPara.innerHTML = `<i class="ti ti-info-circle" aria-hidden="true"></i> <strong>Nota sobre mensalidade:</strong> Todo produto inclui plano de manutenção: <strong>Essencial</strong> (${PLANOS_MANUTENCAO.essencial.inclui.join(' + ')}, R$ ${PLANOS_MANUTENCAO.essencial.mensal}/mês) ou <strong>Evolução</strong> (${PLANOS_MANUTENCAO.evolucao.inclui.join(' + ')}, R$ ${PLANOS_MANUTENCAO.evolucao.mensal_min}–${PLANOS_MANUTENCAO.evolucao.mensal_max}/mês).`;
+      }
+
+      // 4. Telefone do Footer
+      const footerPhone = document.querySelector('.footer-phone');
+      if (footerPhone && typeof WHATSAPP_NUMBER !== 'undefined') {
+        let ddd = WHATSAPP_NUMBER.slice(2, 4);
+        let numPart1 = WHATSAPP_NUMBER.slice(4, 8);
+        let numPart2 = WHATSAPP_NUMBER.slice(8);
+        footerPhone.textContent = `(${ddd}) 9 ${numPart1}-${numPart2}`;
+      }
+    });
 
     // Calculadora de ROI JS Puro
     const roiInput = document.getElementById('roi-value');

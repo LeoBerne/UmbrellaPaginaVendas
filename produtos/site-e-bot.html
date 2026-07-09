@@ -33,7 +33,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 </head>
 
 <body>
@@ -234,7 +234,7 @@
           <div class="price-card featured" data-product="site-bot" data-section="lp-preco">
             <h3>Combo Site + Bot</h3>
             <p class="desc">A melhor relação custo-benefício para estabelecer sua marca na internet com inteligência ativa.</p>
-            <div class="price">Sob consulta<span> / pacote</span></div>
+            <div class="price">Carregando...</div>
             <ul class="price-features">
               <li>Site institucional responsivo completo</li>
               <li>Atendente virtual Lite integrado</li>
@@ -377,6 +377,37 @@
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
+  <script src="../assets/catalogo.js"></script>
+  <script>
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Hambúrguer menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+      mobileMenu.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
     // Fechar menu ao clicar em link
     document.querySelectorAll('.mob-link').forEach(link => {
       link.addEventListener('click', () => {
@@ -402,11 +433,16 @@
       });
     });
 
-    // WhatsApp Constant & Global Redirect Function
-    const WHATSAPP_NUMBER = '558681129331';
     const API_LEADS_URL = '';
 
-    function openWhats(mensagem, origem) {
+    // Unified WhatsApp redirect function
+    function openWhats(mensagemOuId, origem) {
+      let mensagem = mensagemOuId;
+      const prod = getProduto(mensagemOuId);
+      if (prod) {
+        mensagem = prod.mensagem_cta;
+      }
+
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get('utm_source') || '';
       const utmMedium = urlParams.get('utm_medium') || '';
@@ -443,6 +479,15 @@
         window.open(waUrl, '_blank');
       }
     }
+
+    // Dynamic rendering from catalog
+    document.addEventListener('DOMContentLoaded', () => {
+      const priceDiv = document.querySelector('.price-card[data-product="site-bot"] .price');
+      const prod = typeof getProduto !== 'undefined' ? getProduto('site-bot') : null;
+      if (priceDiv && prod) {
+        priceDiv.innerHTML = `R$ ${prod.setup_min.toLocaleString('pt-BR')}<span> setup + R$ ${prod.mensalidade_min}/mês</span>`;
+      }
+    });
   </script>
 </body>
 
