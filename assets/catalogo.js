@@ -1,6 +1,6 @@
 // Auto-gerado por build-catalogo.mjs — NÃO EDITAR MANUALMENTE
 // Fonte: catalogo/catalogo.json v1.0.0
-// Gerado em: 2026-07-09T03:26:34.214Z
+// Gerado em: 2026-07-09T03:52:56.643Z
 
 const WHATSAPP_NUMBER = '558681129331';
 
