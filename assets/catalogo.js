@@ -1,6 +1,6 @@
 // Auto-gerado por build-catalogo.mjs — NÃO EDITAR MANUALMENTE
 // Fonte: catalogo/catalogo.json v1.0.0
-// Gerado em: 2026-07-09T03:52:56.643Z
+// Gerado em: 2026-07-13T15:06:48.982Z
 
 const WHATSAPP_NUMBER = '558681129331';
 
@@ -20,7 +20,8 @@ const CATALOGO_PRODUTOS = [
       "clinicas",
       "servicos",
       "comercio",
-      "profissionais_liberais"
+      "profissionais_liberais",
+      "generica"
     ]
   },
   {
@@ -35,7 +36,8 @@ const CATALOGO_PRODUTOS = [
     "mensagem_cta": "Olá! Vi o Recepcionista IA no site e quero saber mais.",
     "sla": "1 dia útil",
     "verticais": [
-      "clinicas"
+      "clinicas",
+      "generica"
     ]
   },
   {
@@ -50,7 +52,8 @@ const CATALOGO_PRODUTOS = [
     "mensagem_cta": "Olá! Quero saber mais sobre o Agente de Agendamento integrado ao Google Calendar.",
     "sla": "1 dia útil (requer Recepcionista IA ativo)",
     "verticais": [
-      "clinicas"
+      "clinicas",
+      "generica"
     ]
   },
   {
@@ -67,7 +70,8 @@ const CATALOGO_PRODUTOS = [
     "verticais": [
       "clinicas",
       "servicos",
-      "comercio"
+      "comercio",
+      "generica"
     ]
   },
   {
@@ -84,7 +88,8 @@ const CATALOGO_PRODUTOS = [
     "verticais": [
       "clinicas",
       "servicos",
-      "comercio"
+      "comercio",
+      "generica"
     ]
   }
 ];
